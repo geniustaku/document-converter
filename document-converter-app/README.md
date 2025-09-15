@@ -39,7 +39,7 @@ A professional document conversion web application built with Next.js that conve
 2. **Set up environment variables:**
    Copy `.env.local` and update the service URL if needed:
    ```bash
-   LIBREOFFICE_SERVICE_URL=http://libreoffice-v2-1750071134.eastus.azurecontainer.io:3000
+   LIBREOFFICE_SERVICE_URL=http://document-converter-pro.eastus.azurecontainer.io:3000
    ```
 
 3. **Run development server:**
@@ -67,7 +67,7 @@ A professional document conversion web application built with Next.js that conve
 3. **Set environment variables in Vercel:**
    ```bash
    vercel env add LIBREOFFICE_SERVICE_URL
-   # Enter: http://libreoffice-v2-1750071134.eastus.azurecontainer.io:3000
+   # Enter: http://document-converter-pro.eastus.azurecontainer.io:3000
    ```
 
 #### Deploy to Azure Static Web Apps
