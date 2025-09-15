@@ -1,0 +1,33 @@
+{
+  "name": "libreoffice-conversion-service",
+  "version": "1.0.0",
+  "description": "LibreOffice document conversion microservice",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "install-python-deps": "pip3 install -r requirements.txt",
+    "setup": "npm install && npm run install-python-deps",
+    "postinstall": "echo 'Node.js dependencies installed'",
+    "prestart": "echo 'Starting LibreOffice conversion service...'"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "libreoffice-convert": "^1.6.0",
+    "multer": "^1.4.5-lts.1",
+    "sharp": "^0.34.2"
+  },
+  "keywords": [
+    "libreoffice",
+    "document-conversion",
+    "pdf",
+    "word",
+    "office"
+  ],
+  "author": "DocConverter Pro",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

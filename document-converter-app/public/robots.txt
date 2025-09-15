@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://document-converter-pro.vercel.app/sitemap.xml
+
+# High-value pages
+Allow: /
+Allow: /pdf-to-word
+Allow: /word-to-pdf  
+Allow: /image-converter
+
+# Privacy and legal pages
+Allow: /privacy
+Allow: /terms
+Allow: /contact
+
+# Crawl-delay for bots
+Crawl-delay: 1
