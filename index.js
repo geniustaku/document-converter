@@ -462,7 +462,7 @@ app.get('/test', (req, res) => {
 
 // Start server
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT, () => {
   console.log(`[INFO] LibreOffice conversion service started on port ${PORT}`);
   console.log(`[INFO] Node.js version: ${process.version}`);
   console.log(`[INFO] Available endpoints:`);
