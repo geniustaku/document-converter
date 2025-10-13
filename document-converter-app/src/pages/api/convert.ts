@@ -46,11 +46,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
     formData.append('format', format);
 
-    // Forward to LibreOffice service
-    const serviceUrl = process.env.LIBREOFFICE_SERVICE_URL;
-    if (!serviceUrl) {
-      throw new Error('LIBREOFFICE_SERVICE_URL not configured');
-    }
+    // Forward to external LibreOffice service
+    const serviceUrl = process.env.LIBREOFFICE_SERVICE_URL || 'http://document-converter-pro.eastus.azurecontainer.io:3000';
 
     console.log(`🔄 Forwarding to: ${serviceUrl}/api/convert`);
 

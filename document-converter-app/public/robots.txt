@@ -1,18 +1,41 @@
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://document-converter-pro.vercel.app/sitemap.xml
 
-# High-value pages
-Allow: /
+# High-value conversion pages
 Allow: /pdf-to-word
-Allow: /word-to-pdf  
+Allow: /word-to-pdf
+Allow: /pdf-split
+Allow: /pdf-merge
+Allow: /invoice-generator
 Allow: /image-converter
 
-# Privacy and legal pages
+# Information pages
+Allow: /about
 Allow: /privacy
 Allow: /terms
-Allow: /contact
 
-# Crawl-delay for bots
+# Specific bot configurations
+User-agent: Googlebot
 Crawl-delay: 1
+Allow: /
+
+User-agent: Bingbot
+Crawl-delay: 2
+Allow: /
+
+User-agent: Slurp
+Crawl-delay: 3
+Allow: /
+
+# Block common unwanted bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
