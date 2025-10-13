@@ -36,7 +36,7 @@ export default function Document() {
         <NextScript />
         <Script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3259241984391146"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2849262030162416"
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
