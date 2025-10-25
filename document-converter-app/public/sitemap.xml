@@ -1,69 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- Homepage -->
   <url>
-    <loc>https://document-converter-pro.vercel.app/</loc>
-    <lastmod>2025-01-13</lastmod>
+    <loc>https://docs-app.net/</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+  
+  <!-- OCR Page -->
   <url>
-    <loc>https://document-converter-pro.vercel.app/pdf-to-word</loc>
-    <lastmod>2025-01-13</lastmod>
+    <loc>https://docs-app.net/ocr</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+  
+  <!-- PDF to Word -->
   <url>
-    <loc>https://document-converter-pro.vercel.app/word-to-pdf</loc>
-    <lastmod>2025-01-13</lastmod>
+    <loc>https://docs-app.net/pdf-to-word</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+  
+  <!-- Word to PDF -->
   <url>
-    <loc>https://document-converter-pro.vercel.app/image-converter</loc>
-    <lastmod>2025-01-13</lastmod>
+    <loc>https://docs-app.net/word-to-pdf</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Invoice Generator -->
+  <url>
+    <loc>https://docs-app.net/invoice-generator</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  
+  <!-- PDF Split -->
   <url>
-    <loc>https://document-converter-pro.vercel.app/privacy</loc>
-    <lastmod>2025-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://docs-app.net/pdf-split</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
+  
+  <!-- PDF Merge -->
   <url>
-    <loc>https://document-converter-pro.vercel.app/terms</loc>
-    <lastmod>2025-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://docs-app.net/pdf-merge</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
+  
+  <!-- Image Converter -->
   <url>
-    <loc>https://document-converter-pro.vercel.app/about</loc>
-    <lastmod>2025-06-29</lastmod>
+    <loc>https://docs-app.net/image-converter</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blog -->
+  <url>
+    <loc>https://docs-app.net/blog</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- FAQ -->
+  <url>
+    <loc>https://docs-app.net/faq</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  
+  <!-- About -->
   <url>
-    <loc>https://document-converter-pro.vercel.app/invoice-generator</loc>
-    <lastmod>2025-01-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://document-converter-pro.vercel.app/pdf-split</loc>
-    <lastmod>2025-01-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://document-converter-pro.vercel.app/pdf-merge</loc>
-    <lastmod>2025-01-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://document-converter-pro.vercel.app/contact</loc>
-    <lastmod>2025-06-16</lastmod>
+    <loc>https://docs-app.net/about</loc>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.5</priority>
   </url>
+  
+  <!-- Guides -->
+  <url>
+    <loc>https://docs-app.net/guides</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
 </urlset>

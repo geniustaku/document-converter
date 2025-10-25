@@ -1,41 +1,26 @@
+# robots.txt for Document Converter Pro
+# https://docs-app.net
+
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
 
-# Sitemap
-Sitemap: https://document-converter-pro.vercel.app/sitemap.xml
+# Sitemap location
+Sitemap: https://docs-app.net/sitemap.xml
 
-# High-value conversion pages
-Allow: /pdf-to-word
-Allow: /word-to-pdf
-Allow: /pdf-split
-Allow: /pdf-merge
-Allow: /invoice-generator
-Allow: /image-converter
-
-# Information pages
-Allow: /about
-Allow: /privacy
-Allow: /terms
-
-# Specific bot configurations
-User-agent: Googlebot
+# Crawl rate
 Crawl-delay: 1
+
+# Google
+User-agent: Googlebot
 Allow: /
 
+# Bing
 User-agent: Bingbot
-Crawl-delay: 2
 Allow: /
 
-User-agent: Slurp
-Crawl-delay: 3
+# Yandex
+User-agent: Yandex
 Allow: /
-
-# Block common unwanted bots
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
