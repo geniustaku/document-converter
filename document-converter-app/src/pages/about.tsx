@@ -59,35 +59,59 @@ export default function About() {
             />
           </div>
 
-          {/* Story Section */}
+          {/* Document History Section */}
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-12">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  Founded in 2024, Document Converter Pro emerged from a simple frustration: 
-                  why should converting a PDF to Word cost $20/month when the technology already exists?
-                </p>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  Our team of software engineers and digital transformation specialists saw an opportunity 
-                  to leverage LibreOffice's powerful conversion engine and make it accessible to everyone, 
-                  free of charge.
-                </p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">The Evolution of Digital Documents</h2>
+
+            <div className="space-y-8">
+              <div className="border-l-4 border-blue-500 pl-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">1970s - The Beginning</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Today, we process over 10,000 documents daily for users in 150+ countries, 
-                  from students working on assignments to legal professionals handling contracts.
+                  The first word processors emerged, replacing typewriters. Documents became digital for the first time,
+                  stored on floppy disks and magnetic tapes.
                 </p>
               </div>
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-8">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-blue-600 mb-2">2.5M+</div>
-                  <div className="text-gray-600 mb-4">Documents Converted</div>
-                  <div className="text-4xl font-bold text-green-600 mb-2">150+</div>
-                  <div className="text-gray-600 mb-4">Countries Served</div>
-                  <div className="text-4xl font-bold text-purple-600 mb-2">99.7%</div>
-                  <div className="text-gray-600">Accuracy Rate</div>
-                </div>
+
+              <div className="border-l-4 border-green-500 pl-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">1993 - PDF Revolution</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Adobe introduced the Portable Document Format (PDF), creating a universal standard for document sharing.
+                  For the first time, documents looked identical across all devices and operating systems.
+                </p>
               </div>
+
+              <div className="border-l-4 border-purple-500 pl-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">2000s - Office Suite Wars</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Microsoft Office dominated, but LibreOffice and OpenOffice emerged as powerful open-source alternatives,
+                  making document editing accessible to everyone without expensive licenses.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-orange-500 pl-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">2010s - Cloud & Mobile Era</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Google Docs, Dropbox, and mobile apps transformed how we work. Documents moved to the cloud,
+                  enabling real-time collaboration and access from anywhere.
+                </p>
+              </div>
+
+              <div className="border-l-4 border-red-500 pl-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">2020s - AI-Powered Document Intelligence</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Today, AI can extract text from images, translate documents instantly, and understand invoice data.
+                  Document Converter Pro brings these advanced capabilities to everyone, completely free.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-10 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Where We Are Now</h3>
+              <p className="text-gray-600 leading-relaxed text-center max-w-3xl mx-auto">
+                Document Converter Pro leverages decades of open-source development, combining LibreOffice's
+                battle-tested conversion engine with Microsoft Azure's AI-powered OCR and translation services.
+                We make professional-grade document processing accessible to students, freelancers, and businesses alike.
+              </p>
             </div>
           </div>
 
@@ -180,29 +204,45 @@ export default function About() {
             </div>
           </div>
 
-          {/* Team Section */}
+          {/* Open Source Philosophy Section */}
           <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl shadow-lg p-8 md:p-12 mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Built by Experts</h2>
-            
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Built on Open Source</h2>
+
             <div className="max-w-4xl mx-auto">
               <p className="text-lg text-gray-700 leading-relaxed text-center mb-8">
-                Our team combines decades of experience in enterprise software, digital transformation, 
-                and cybersecurity. We've worked with companies like Microsoft, Google, and IBM to solve 
-                complex document processing challenges.
+                Document Converter Pro stands on the shoulders of giants. We leverage powerful open-source
+                technologies and cloud services to deliver professional-grade document processing without the
+                enterprise price tag.
               </p>
-              
-              <div className="grid md:grid-cols-3 gap-6 text-center">
+
+              <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-white rounded-xl p-6 shadow-md">
-                  <div className="text-2xl font-bold text-blue-600 mb-2">15+</div>
-                  <div className="text-gray-600">Years Combined Experience</div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">📚 LibreOffice</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    The world's most trusted open-source office suite, with decades of development
+                    powering document conversions for millions worldwide.
+                  </p>
                 </div>
                 <div className="bg-white rounded-xl p-6 shadow-md">
-                  <div className="text-2xl font-bold text-green-600 mb-2">5</div>
-                  <div className="text-gray-600">ISO Certifications</div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">☁️ Microsoft Azure</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Enterprise-grade AI services for OCR, document intelligence, and multi-language
+                    translation with industry-leading accuracy.
+                  </p>
                 </div>
                 <div className="bg-white rounded-xl p-6 shadow-md">
-                  <div className="text-2xl font-bold text-purple-600 mb-2">100M+</div>
-                  <div className="text-gray-600">Documents Processed (Career)</div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">⚡ Next.js & React</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Modern web framework ensuring lightning-fast performance, seamless user experience,
+                    and mobile responsiveness.
+                  </p>
+                </div>
+                <div className="bg-white rounded-xl p-6 shadow-md">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">🔒 Security First</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    Encrypted processing, automatic file deletion, and zero-knowledge architecture
+                    ensure your documents remain private.
+                  </p>
                 </div>
               </div>
             </div>
