@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd document-converter-app && npm install && npm run build",
+  "outputDirectory": "document-converter-app/.next",
+  "framework": "nextjs",
+  "installCommand": "cd document-converter-app && npm install",
+  "devCommand": "cd document-converter-app && npm run dev"
+}
