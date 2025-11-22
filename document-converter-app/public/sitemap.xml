@@ -3,253 +3,294 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  
+
   <!-- Homepage -->
   <url>
-    <loc>https://document-converter-pro.vercel.app/</loc>
-    <lastmod>2025-01-20</lastmod>
+    <loc>https://www.docs-app.net/</loc>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- OCR Page -->
+  <!-- Main Pages -->
   <url>
-    <loc>https://document-converter-pro.vercel.app/ocr</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://www.docs-app.net/about</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
-  <!-- PDF to Word -->
   <url>
-    <loc>https://document-converter-pro.vercel.app/pdf-to-word</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Word to PDF -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/word-to-pdf</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Compress PDF -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/compress-pdf</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- JPG to PDF -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/jpg-to-pdf</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Merge PDF -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/merge-pdf</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Sign PDF -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/sign-pdf</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Split PDF -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/split-pdf</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Excel to PDF -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/excel-to-pdf</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Rotate PDF -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/rotate-pdf</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- PDF to Excel -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/pdf-to-excel</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- QR Code Generator -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/qr-code-generator</loc>
-    <lastmod>2025-01-20</lastmod>
+    <loc>https://www.docs-app.net/faq</loc>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Resume Builder -->
   <url>
-    <loc>https://document-converter-pro.vercel.app/resume-builder</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <loc>https://www.docs-app.net/privacy</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
   </url>
 
-  <!-- Background Remover -->
   <url>
-    <loc>https://document-converter-pro.vercel.app/background-remover</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <loc>https://www.docs-app.net/terms</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
   </url>
 
-  <!-- Paraphrase Tool -->
   <url>
-    <loc>https://document-converter-pro.vercel.app/paraphrase-tool</loc>
-    <lastmod>2025-01-20</lastmod>
+    <loc>https://www.docs-app.net/sitemap</loc>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.6</priority>
   </url>
 
-  <!-- Image Resizer -->
   <url>
-    <loc>https://document-converter-pro.vercel.app/image-resizer</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <!-- Password Generator -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/password-generator</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Word Counter -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/word-counter</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Barcode Generator -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/barcode-generator</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Invoice Generator -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/invoice-generator</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- AI Summarizer -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/ai-summarizer</loc>
-    <lastmod>2025-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <!-- AI Content Writer -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/ai-content-writer</loc>
-    <lastmod>2025-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <!-- AI Email Writer -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/ai-email-writer</loc>
-    <lastmod>2025-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- AI Social Media Generator -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/ai-social-media</loc>
-    <lastmod>2025-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- AI Grammar Checker -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/ai-grammar-checker</loc>
-    <lastmod>2025-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- AI Product Description Generator -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/ai-product-description</loc>
-    <lastmod>2025-01-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- Blog -->
-  <url>
-    <loc>https://document-converter-pro.vercel.app/blog</loc>
-    <lastmod>2025-01-20</lastmod>
+    <loc>https://www.docs-app.net/blog</loc>
+    <lastmod>2025-01-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- About -->
+  <!-- PDF Conversion Tools (High Priority) -->
   <url>
-    <loc>https://document-converter-pro.vercel.app/about</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://www.docs-app.net/pdf-to-word</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
 
-  <!-- Privacy -->
   <url>
-    <loc>https://document-converter-pro.vercel.app/privacy</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
+    <loc>https://www.docs-app.net/word-to-pdf</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
 
-  <!-- Terms -->
   <url>
-    <loc>https://document-converter-pro.vercel.app/terms</loc>
-    <lastmod>2025-01-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
+    <loc>https://www.docs-app.net/pdf-to-excel</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
-  
+
+  <url>
+    <loc>https://www.docs-app.net/excel-to-pdf</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/converter</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- PDF Utilities -->
+  <url>
+    <loc>https://www.docs-app.net/compress-pdf</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/pdf-compress</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/merge-pdf</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/pdf-merge</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/split-pdf</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/pdf-split</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/rotate-pdf</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/sign-pdf</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/pdf-filler</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- AI-Powered Tools (High Priority) -->
+  <url>
+    <loc>https://www.docs-app.net/ai-content-writer</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/ai-email-writer</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/ai-grammar-checker</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/ai-product-description</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/ai-social-media</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/ai-summarizer</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/paraphrase-tool</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Image Tools -->
+  <url>
+    <loc>https://www.docs-app.net/image-converter</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/image-resizer</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/jpg-to-pdf</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/background-remover</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/ocr</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Business & Productivity Tools -->
+  <url>
+    <loc>https://www.docs-app.net/resume-builder</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/invoice-generator</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/qr-code-generator</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/barcode-generator</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Utility Tools -->
+  <url>
+    <loc>https://www.docs-app.net/password-generator</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.docs-app.net/word-counter</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Guides & Documentation -->
+  <url>
+    <loc>https://www.docs-app.net/guides/pdf-to-word-guide</loc>
+    <lastmod>2025-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
 </urlset>
