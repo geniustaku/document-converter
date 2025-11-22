@@ -6,98 +6,250 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://docs-app.net/</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://document-converter-pro.vercel.app/</loc>
+    <lastmod>2025-01-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-  
+
   <!-- OCR Page -->
   <url>
-    <loc>https://docs-app.net/ocr</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://document-converter-pro.vercel.app/ocr</loc>
+    <lastmod>2025-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  
+
   <!-- PDF to Word -->
   <url>
-    <loc>https://docs-app.net/pdf-to-word</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://document-converter-pro.vercel.app/pdf-to-word</loc>
+    <lastmod>2025-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  
+
   <!-- Word to PDF -->
   <url>
-    <loc>https://docs-app.net/word-to-pdf</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://document-converter-pro.vercel.app/word-to-pdf</loc>
+    <lastmod>2025-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  
+
+  <!-- Compress PDF -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/compress-pdf</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- JPG to PDF -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/jpg-to-pdf</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Merge PDF -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/merge-pdf</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Sign PDF -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/sign-pdf</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Split PDF -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/split-pdf</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Excel to PDF -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/excel-to-pdf</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Rotate PDF -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/rotate-pdf</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- PDF to Excel -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/pdf-to-excel</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- QR Code Generator -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/qr-code-generator</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Resume Builder -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/resume-builder</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Background Remover -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/background-remover</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Paraphrase Tool -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/paraphrase-tool</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Image Resizer -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/image-resizer</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- Password Generator -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/password-generator</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Word Counter -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/word-counter</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Barcode Generator -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/barcode-generator</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Invoice Generator -->
   <url>
-    <loc>https://docs-app.net/invoice-generator</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://document-converter-pro.vercel.app/invoice-generator</loc>
+    <lastmod>2025-01-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- PDF Split -->
+
+  <!-- AI Summarizer -->
   <url>
-    <loc>https://docs-app.net/pdf-split</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://document-converter-pro.vercel.app/ai-summarizer</loc>
+    <lastmod>2025-01-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.95</priority>
   </url>
-  
-  <!-- PDF Merge -->
+
+  <!-- AI Content Writer -->
   <url>
-    <loc>https://docs-app.net/pdf-merge</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://document-converter-pro.vercel.app/ai-content-writer</loc>
+    <lastmod>2025-01-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.95</priority>
   </url>
-  
-  <!-- Image Converter -->
+
+  <!-- AI Email Writer -->
   <url>
-    <loc>https://docs-app.net/image-converter</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://document-converter-pro.vercel.app/ai-email-writer</loc>
+    <lastmod>2025-01-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
-  
+
+  <!-- AI Social Media Generator -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/ai-social-media</loc>
+    <lastmod>2025-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- AI Grammar Checker -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/ai-grammar-checker</loc>
+    <lastmod>2025-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- AI Product Description Generator -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/ai-product-description</loc>
+    <lastmod>2025-01-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
   <!-- Blog -->
   <url>
-    <loc>https://docs-app.net/blog</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://document-converter-pro.vercel.app/blog</loc>
+    <lastmod>2025-01-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
-  
-  <!-- FAQ -->
-  <url>
-    <loc>https://docs-app.net/faq</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
+
   <!-- About -->
   <url>
-    <loc>https://docs-app.net/about</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://document-converter-pro.vercel.app/about</loc>
+    <lastmod>2025-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-  
-  <!-- Guides -->
+
+  <!-- Privacy -->
   <url>
-    <loc>https://docs-app.net/guides</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://document-converter-pro.vercel.app/privacy</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Terms -->
+  <url>
+    <loc>https://document-converter-pro.vercel.app/terms</loc>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
   </url>
   
 </urlset>

@@ -265,22 +265,22 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Free PDF to Word Converter & OCR | Professional Document Tools Online</title>
-        <meta name="description" content="Convert PDF to Word, extract text with OCR, split & merge PDFs online for free. Professional document converter with AI-powered tools and 99.7% accuracy. No registration required." />
-        <meta name="keywords" content="PDF to Word converter, OCR online, Word to PDF, document converter, PDF converter online free, split PDF, merge PDF, invoice generator, text extraction, document intelligence, batch processing, AI OCR" />
+        <title>Free PDF to Word Converter - Convert Documents Online Instantly</title>
+        <meta name="description" content="Convert PDF to editable Word documents in seconds. AI-powered tools for content writing, email generation, summarization & more. Extract text from images and scanned PDFs. Split, merge, and transform documents online - completely free with no file size limits or watermarks." />
+        <meta name="keywords" content="PDF to Word converter, convert PDF to Word, PDF converter online free, Word to PDF, split PDF, merge PDF, extract text from PDF, OCR scanner, invoice generator, document conversion, edit PDF, PDF tools, AI content writer, AI email writer, AI summarizer, GPT-4 tools" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <link rel="canonical" href="https://docs-app.net" />
 
         {/* Open Graph */}
-        <meta property="og:title" content="Free PDF to Word Converter & OCR | Professional Document Tools" />
-        <meta property="og:description" content="Convert documents, extract text with AI-powered OCR, and process files online for free. 99.7% accuracy, no registration required." />
+        <meta property="og:title" content="Free PDF to Word Converter - Convert Documents Online Instantly" />
+        <meta property="og:description" content="Convert PDF to editable Word documents, extract text from images, split and merge PDFs - all free with no file size limits." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://docs-app.net" />
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Free PDF to Word Converter & OCR" />
-        <meta name="twitter:description" content="Professional document tools with AI-powered OCR and 99.7% accuracy." />
+        <meta name="twitter:title" content="Free PDF to Word Converter" />
+        <meta name="twitter:description" content="Convert PDF to editable Word documents and extract text from images - completely free." />
 
         {/* Structured Data */}
         <script type="application/ld+json">
@@ -317,52 +317,53 @@ export default function Home() {
         }
 
         body {
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
           line-height: 1.6;
           color: #1a202c;
-          background: #fafafa;
+          background: #ffffff;
         }
 
         .container {
-          max-width: 1200px;
+          max-width: 1280px;
           margin: 0 auto;
-          padding: 0 20px;
+          padding: 0 32px;
         }
 
         .gradient-text {
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
         }
 
         .glass-card {
-          background: rgba(255, 255, 255, 0.9);
-          backdrop-filter: blur(10px);
-          border: 1px solid rgba(255, 255, 255, 0.2);
-          border-radius: 16px;
-          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+          background: rgba(255, 255, 255, 0.95);
+          backdrop-filter: blur(20px);
+          border: 1px solid rgba(99, 102, 241, 0.1);
+          border-radius: 24px;
+          box-shadow: 0 20px 60px rgba(99, 102, 241, 0.08);
         }
 
         .btn-primary {
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
           color: white;
           border: none;
-          padding: 14px 32px;
-          border-radius: 12px;
+          padding: 16px 40px;
+          border-radius: 16px;
           font-weight: 600;
           font-size: 16px;
           cursor: pointer;
-          transition: all 0.3s ease;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
         }
 
         .btn-primary:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 12px 25px rgba(102, 126, 234, 0.3);
+          transform: translateY(-3px);
+          box-shadow: 0 20px 40px rgba(99, 102, 241, 0.4);
         }
 
         .btn-primary:disabled {
-          opacity: 0.6;
+          opacity: 0.5;
           cursor: not-allowed;
           transform: none;
         }
@@ -384,22 +385,40 @@ export default function Home() {
         }
 
         .tool-card {
-          background: white;
-          border: 1px solid #e2e8f0;
-          border-radius: 16px;
-          padding: 32px 24px;
+          background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+          border: 2px solid #e2e8f0;
+          border-radius: 20px;
+          padding: 36px 28px;
           text-align: center;
-          transition: all 0.3s ease;
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
           cursor: pointer;
           text-decoration: none;
           color: inherit;
           display: block;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .tool-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+          opacity: 0;
+          transition: opacity 0.4s ease;
         }
 
         .tool-card:hover {
-          transform: translateY(-4px);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-          border-color: #cbd5e0;
+          transform: translateY(-6px);
+          box-shadow: 0 30px 60px rgba(99, 102, 241, 0.15);
+          border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .tool-card:hover::before {
+          opacity: 1;
         }
 
         .article-card {
@@ -461,117 +480,961 @@ export default function Home() {
       </Head>
 
       <div style={{ minHeight: '100vh', background: '#fafafa' }}>
-        {/* Header */}
+        {/* Header - Premium Design */}
         <header style={{
-          background: 'white',
-          borderBottom: '1px solid #e2e8f0',
+          background: 'rgba(255, 255, 255, 0.95)',
+          backdropFilter: 'blur(20px)',
+          borderBottom: '1px solid rgba(226, 232, 240, 0.8)',
           position: 'sticky',
           top: 0,
-          zIndex: 100
+          zIndex: 100,
+          boxShadow: '0 1px 3px rgba(0, 0, 0, 0.05)'
         }}>
           <div className="container" style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            height: '72px'
+            height: '80px'
           }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
               <div style={{
-                width: '40px',
-                height: '40px',
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                borderRadius: '12px',
+                width: '48px',
+                height: '48px',
+                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                borderRadius: '16px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: 'white',
-                fontSize: '20px',
-                fontWeight: 'bold'
+                fontSize: '24px',
+                fontWeight: 'bold',
+                boxShadow: '0 8px 20px rgba(99, 102, 241, 0.3)'
               }}>
-                D
+                📄
               </div>
               <div>
                 <h1 style={{
-                  fontSize: '24px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  letterSpacing: '-0.5px'
+                  fontSize: '22px',
+                  fontWeight: '800',
+                  background: 'linear-gradient(135deg, #0f172a 0%, #334155 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  letterSpacing: '-0.5px',
+                  marginBottom: '2px'
                 }}>
                   Document Converter Pro
                 </h1>
                 <div style={{
-                  fontSize: '12px',
-                  color: '#718096',
-                  fontWeight: '500',
-                  letterSpacing: '1px',
+                  fontSize: '11px',
+                  color: '#94a3b8',
+                  fontWeight: '600',
+                  letterSpacing: '1.2px',
                   textTransform: 'uppercase'
                 }}>
-                  AI-Powered Tools
+                  Professional Tools Suite
                 </div>
               </div>
             </div>
 
-            <nav style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
-              <a href="/blog" style={{ color: '#718096', textDecoration: 'none', fontWeight: '500', fontSize: '15px' }}>Blog</a>
-              <a href="/faq" style={{ color: '#718096', textDecoration: 'none', fontWeight: '500', fontSize: '15px' }}>FAQ</a>
-              <a href="/about" style={{ color: '#718096', textDecoration: 'none', fontWeight: '500', fontSize: '15px' }}>About</a>
+            <nav style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
+              <a href="/blog" style={{ color: '#64748b', textDecoration: 'none', fontWeight: '600', fontSize: '15px', transition: 'color 0.2s' }}>Blog</a>
+              <a href="/faq" style={{ color: '#64748b', textDecoration: 'none', fontWeight: '600', fontSize: '15px', transition: 'color 0.2s' }}>FAQ</a>
+              <a href="/about" style={{ color: '#64748b', textDecoration: 'none', fontWeight: '600', fontSize: '15px', transition: 'color 0.2s' }}>About</a>
               <div style={{
-                background: 'linear-gradient(135deg, #48bb78 0%, #38a169 100%)',
+                background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
                 color: 'white',
-                padding: '8px 16px',
-                borderRadius: '20px',
+                padding: '10px 20px',
+                borderRadius: '24px',
                 fontSize: '12px',
-                fontWeight: '600',
-                letterSpacing: '0.5px'
+                fontWeight: '700',
+                letterSpacing: '0.5px',
+                boxShadow: '0 4px 15px rgba(16, 185, 129, 0.3)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px'
               }}>
-                ● ONLINE
+                <span style={{ fontSize: '8px' }}>●</span>
+                ONLINE
               </div>
             </nav>
           </div>
         </header>
 
-        {/* Hero Section */}
-        <section style={{ padding: '60px 0 40px 0', background: 'linear-gradient(180deg, #f7fafc 0%, #fafafa 100%)' }}>
-          <div className="container">
-            <div style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
+        {/* Hero Section - Compact & Modern */}
+        <section style={{
+          padding: '40px 0 32px 0',
+          background: 'radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.05) 0%, transparent 50%), linear-gradient(180deg, #fafbff 0%, #ffffff 100%)',
+          position: 'relative',
+          overflow: 'hidden'
+        }}>
+          {/* Decorative elements */}
+          <div style={{
+            position: 'absolute',
+            top: '-50px',
+            right: '-50px',
+            width: '300px',
+            height: '300px',
+            background: 'radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%)',
+            borderRadius: '50%',
+            filter: 'blur(50px)',
+            pointerEvents: 'none'
+          }} />
+          <div style={{
+            position: 'absolute',
+            bottom: '-50px',
+            left: '-50px',
+            width: '300px',
+            height: '300px',
+            background: 'radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%)',
+            borderRadius: '50%',
+            filter: 'blur(50px)',
+            pointerEvents: 'none'
+          }} />
+
+          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+            <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
               <div style={{
                 display: 'inline-block',
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                color: 'white',
-                padding: '8px 20px',
-                borderRadius: '20px',
-                fontSize: '14px',
+                background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
+                border: '2px solid rgba(99, 102, 241, 0.2)',
+                borderRadius: '50px',
+                padding: '6px 18px',
+                marginBottom: '16px',
+                fontSize: '12px',
                 fontWeight: '600',
-                letterSpacing: '0.5px',
-                marginBottom: '24px'
+                color: '#6366f1',
+                letterSpacing: '0.5px'
               }}>
-                Powered by Advanced AI + LibreOffice
+                ✨ Professional Document Tools
               </div>
 
               <h1 style={{
-                fontSize: '52px',
-                fontWeight: '800',
-                color: '#1a202c',
-                marginBottom: '20px',
-                letterSpacing: '-1px',
-                lineHeight: '1.1'
+                fontSize: '42px',
+                fontWeight: '900',
+                color: '#0f172a',
+                marginBottom: '14px',
+                letterSpacing: '-1.5px',
+                lineHeight: '1.15'
               }}>
-                Professional Document Tools
-                <br />
-                <span className="gradient-text">With AI-Powered OCR</span>
+                Your <span className="gradient-text">Ultimate Hub</span> for Every Document Need
               </h1>
 
               <p style={{
-                fontSize: '20px',
-                color: '#718096',
-                marginBottom: '32px',
+                fontSize: '16px',
+                color: '#64748b',
+                marginBottom: '24px',
                 fontWeight: '400',
-                lineHeight: '1.6'
+                lineHeight: '1.6',
+                maxWidth: '600px',
+                margin: '0 auto 24px'
               }}>
-                Convert documents, extract text with OCR, split PDFs, and more.
-                <br />
-                Free, secure, and powered by advanced AI technology.
+                Transform, create, and optimize documents with our AI-powered suite. 100% free, no limits.
               </p>
+
+              {/* Search Bar */}
+              <div style={{
+                maxWidth: '550px',
+                margin: '0 auto',
+                position: 'relative'
+              }}>
+                <div style={{
+                  position: 'absolute',
+                  left: '20px',
+                  top: '50%',
+                  transform: 'translateY(-50%)',
+                  fontSize: '18px',
+                  color: '#94a3b8',
+                  pointerEvents: 'none'
+                }}>
+                  🔍
+                </div>
+                <input
+                  type="text"
+                  placeholder="Search tools... (PDF to Word, Resume Builder, OCR)"
+                  onChange={(e) => {
+                    const search = e.target.value.toLowerCase();
+                    const cards = document.querySelectorAll('.tool-card');
+                    cards.forEach((card) => {
+                      const text = card.textContent?.toLowerCase() || '';
+                      (card as HTMLElement).style.display = text.includes(search) ? 'block' : 'none';
+                    });
+                  }}
+                  style={{
+                    width: '100%',
+                    padding: '16px 20px 16px 52px',
+                    fontSize: '15px',
+                    fontWeight: '500',
+                    color: '#0f172a',
+                    backgroundColor: '#ffffff',
+                    border: '2px solid #e2e8f0',
+                    borderRadius: '14px',
+                    outline: 'none',
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.06)',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onFocus={(e) => {
+                    e.target.style.borderColor = '#667eea';
+                    e.target.style.boxShadow = '0 4px 24px rgba(102, 126, 234, 0.15)';
+                  }}
+                  onBlur={(e) => {
+                    e.target.style.borderColor = '#e2e8f0';
+                    e.target.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.06)';
+                  }}
+                />
+                <svg
+                  style={{
+                    position: 'absolute',
+                    left: '20px',
+                    top: '50%',
+                    transform: 'translateY(-50%)',
+                    width: '20px',
+                    height: '20px',
+                    color: '#94a3b8'
+                  }}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+
+              <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+                gap: '24px',
+                flexWrap: 'wrap',
+                fontSize: '14px',
+                color: '#64748b'
+              }}>
+                <span>✓ 100% Free</span>
+                <span>✓ No Sign-up</span>
+                <span>✓ No Watermarks</span>
+                <span>✓ Unlimited Use</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Tools Grid */}
+        <section style={{ padding: '20px 0 60px 0', background: 'white' }}>
+          <div className="container">
+            <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+              <h2 style={{
+                fontSize: '28px',
+                fontWeight: '700',
+                color: '#1a202c',
+                marginBottom: '8px',
+                letterSpacing: '-0.3px'
+              }}>
+                All Tools
+              </h2>
+              <p style={{ fontSize: '16px', color: '#64748b', fontWeight: '400' }}>
+                Click any tool to get started
+              </p>
+            </div>
+
+            <div style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+              gap: '24px',
+              marginBottom: '32px'
+            }}>
+              {/* PDF to Word */}
+              <a href="/pdf-to-word" className="tool-card">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px'
+                }}>
+                  📄
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px'
+                }}>
+                  PDF to Word
+                </h3>
+                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  Convert PDF to editable DOCX
+                </p>
+              </a>
+
+              {/* Word to PDF */}
+              <a href="/word-to-pdf" className="tool-card">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'linear-gradient(135deg, #48bb78 0%, #38a169 100%)',
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px'
+                }}>
+                  📝
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px'
+                }}>
+                  Word to PDF
+                </h3>
+                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  Create professional PDFs
+                </p>
+              </a>
+
+              {/* Compress PDF */}
+              <a href="/compress-pdf" className="tool-card">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'linear-gradient(135deg, #ed8936 0%, #dd6b20 100%)',
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px'
+                }}>
+                  🗜️
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px'
+                }}>
+                  Compress PDF
+                </h3>
+                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  Reduce PDF file size
+                </p>
+              </a>
+
+              {/* JPG to PDF */}
+              <a href="/jpg-to-pdf" className="tool-card">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'linear-gradient(135deg, #48bb78 0%, #38a169 100%)',
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px'
+                }}>
+                  🖼️
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px'
+                }}>
+                  JPG to PDF
+                </h3>
+                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  Convert images to PDF
+                </p>
+              </a>
+
+              {/* Merge PDF */}
+              <a href="/merge-pdf" className="tool-card">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px'
+                }}>
+                  📑
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px'
+                }}>
+                  Merge PDF
+                </h3>
+                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  Combine multiple PDFs
+                </p>
+              </a>
+
+              {/* Split PDF */}
+              <a href="/split-pdf" className="tool-card">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)',
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px'
+                }}>
+                  ✂️
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px'
+                }}>
+                  Split PDF
+                </h3>
+                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  Extract specific pages
+                </p>
+              </a>
+
+              {/* Excel to PDF */}
+              <a href="/excel-to-pdf" className="tool-card">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px'
+                }}>
+                  📊
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px'
+                }}>
+                  Excel to PDF
+                </h3>
+                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  Convert spreadsheets to PDF
+                </p>
+              </a>
+
+              {/* Rotate PDF */}
+              <a href="/rotate-pdf" className="tool-card">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px'
+                }}>
+                  🔄
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px'
+                }}>
+                  Rotate PDF
+                </h3>
+                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  Fix page orientation
+                </p>
+              </a>
+
+              {/* PDF to Excel */}
+              <a href="/pdf-to-excel" className="tool-card">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)',
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px'
+                }}>
+                  📑
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px'
+                }}>
+                  PDF to Excel
+                </h3>
+                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  Extract tables from PDFs
+                </p>
+              </a>
+
+              {/* OCR */}
+              <a href="/ocr" className="tool-card">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'linear-gradient(135deg, #ec4899 0%, #db2777 100%)',
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px'
+                }}>
+                  👁️
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px'
+                }}>
+                  OCR Scanner
+                </h3>
+                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  Extract text from images
+                </p>
+              </a>
+
+              {/* QR Code Generator */}
+              <a href="/qr-code-generator" className="tool-card">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'linear-gradient(135deg, #ec4899 0%, #db2777 100%)',
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px'
+                }}>
+                  📲
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px'
+                }}>
+                  QR Code Generator
+                </h3>
+                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  Create custom QR codes
+                </p>
+              </a>
+
+              {/* Resume Builder */}
+              <a href="/resume-builder" className="tool-card">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px'
+                }}>
+                  📄
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px'
+                }}>
+                  Resume Builder
+                </h3>
+                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  Create professional CVs
+                </p>
+              </a>
+
+              {/* Background Remover */}
+              <a href="/background-remover" className="tool-card">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px'
+                }}>
+                  🖼️
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px'
+                }}>
+                  Background Remover
+                </h3>
+                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  Remove image backgrounds
+                </p>
+              </a>
+
+              {/* Paraphrase Tool */}
+              <a href="/paraphrase-tool" className="tool-card">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px'
+                }}>
+                  ✍️
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px'
+                }}>
+                  Paraphrase Tool
+                </h3>
+                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  Rephrase text instantly
+                </p>
+              </a>
+
+              {/* Image Resizer */}
+              <a href="/image-resizer" className="tool-card">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)',
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px'
+                }}>
+                  📐
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px'
+                }}>
+                  Image Resizer
+                </h3>
+                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  Resize for social media
+                </p>
+              </a>
+
+              {/* Password Generator */}
+              <a href="/password-generator" className="tool-card">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px'
+                }}>
+                  🔐
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px'
+                }}>
+                  Password Generator
+                </h3>
+                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  Create secure passwords
+                </p>
+              </a>
+
+              {/* Word Counter */}
+              <a href="/word-counter" className="tool-card">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)',
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px'
+                }}>
+                  📊
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px'
+                }}>
+                  Word Counter
+                </h3>
+                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  Count words & characters
+                </p>
+              </a>
+
+              {/* Barcode Generator */}
+              <a href="/barcode-generator" className="tool-card">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px'
+                }}>
+                  📊
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px'
+                }}>
+                  Barcode Generator
+                </h3>
+                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  Create EAN, UPC barcodes
+                </p>
+              </a>
+            </div>
+
+            {/* AI-Powered Tools Section */}
+            <div style={{ marginTop: '48px' }}>
+              <div style={{ textAlign: 'center', marginBottom: '32px' }}>
+                <h2 style={{
+                  fontSize: '28px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px',
+                  letterSpacing: '-0.3px'
+                }}>
+                  🤖 AI-Powered Tools
+                </h2>
+                <p style={{ fontSize: '16px', color: '#64748b', fontWeight: '400' }}>
+                  Advanced content creation with AI
+                </p>
+              </div>
+
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+                gap: '24px'
+              }}>
+                {/* AI Summarizer */}
+                <a href="/ai-summarizer" className="tool-card">
+                  <div style={{
+                    width: '64px',
+                    height: '64px',
+                    background: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)',
+                    borderRadius: '16px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 20px',
+                    fontSize: '28px'
+                  }}>
+                    📝
+                  </div>
+                  <h3 style={{
+                    fontSize: '18px',
+                    fontWeight: '700',
+                    color: '#1a202c',
+                    marginBottom: '8px'
+                  }}>
+                    AI Summarizer
+                  </h3>
+                  <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                    Extract key points instantly
+                  </p>
+                </a>
+
+                {/* AI Content Writer */}
+                <a href="/ai-content-writer" className="tool-card">
+                  <div style={{
+                    width: '64px',
+                    height: '64px',
+                    background: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
+                    borderRadius: '16px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 20px',
+                    fontSize: '28px'
+                  }}>
+                    ✍️
+                  </div>
+                  <h3 style={{
+                    fontSize: '18px',
+                    fontWeight: '700',
+                    color: '#1a202c',
+                    marginBottom: '8px'
+                  }}>
+                    AI Content Writer
+                  </h3>
+                  <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                    Generate blogs, essays & articles
+                  </p>
+                </a>
+
+                {/* AI Email Writer */}
+                <a href="/ai-email-writer" className="tool-card">
+                  <div style={{
+                    width: '64px',
+                    height: '64px',
+                    background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)',
+                    borderRadius: '16px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 20px',
+                    fontSize: '28px'
+                  }}>
+                    ✉️
+                  </div>
+                  <h3 style={{
+                    fontSize: '18px',
+                    fontWeight: '700',
+                    color: '#1a202c',
+                    marginBottom: '8px'
+                  }}>
+                    AI Email Writer
+                  </h3>
+                  <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                    Professional emails & outreach
+                  </p>
+                </a>
+
+                {/* AI Social Media Generator */}
+                <a href="/ai-social-media" className="tool-card">
+                  <div style={{
+                    width: '64px',
+                    height: '64px',
+                    background: 'linear-gradient(135deg, #ec4899 0%, #db2777 100%)',
+                    borderRadius: '16px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 20px',
+                    fontSize: '28px'
+                  }}>
+                    📱
+                  </div>
+                  <h3 style={{
+                    fontSize: '18px',
+                    fontWeight: '700',
+                    color: '#1a202c',
+                    marginBottom: '8px'
+                  }}>
+                    AI Social Media
+                  </h3>
+                  <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                    Posts for all platforms
+                  </p>
+                </a>
+
+                {/* AI Grammar Checker */}
+                <a href="/ai-grammar-checker" className="tool-card">
+                  <div style={{
+                    width: '64px',
+                    height: '64px',
+                    background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+                    borderRadius: '16px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 20px',
+                    fontSize: '28px'
+                  }}>
+                    ✓
+                  </div>
+                  <h3 style={{
+                    fontSize: '18px',
+                    fontWeight: '700',
+                    color: '#1a202c',
+                    marginBottom: '8px'
+                  }}>
+                    AI Grammar Checker
+                  </h3>
+                  <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                    Fix grammar & style errors
+                  </p>
+                </a>
+
+                {/* AI Product Description */}
+                <a href="/ai-product-description" className="tool-card">
+                  <div style={{
+                    width: '64px',
+                    height: '64px',
+                    background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+                    borderRadius: '16px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    margin: '0 auto 20px',
+                    fontSize: '28px'
+                  }}>
+                    🛍️
+                  </div>
+                  <h3 style={{
+                    fontSize: '18px',
+                    fontWeight: '700',
+                    color: '#1a202c',
+                    marginBottom: '8px'
+                  }}>
+                    AI Product Description
+                  </h3>
+                  <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                    E-commerce copywriting
+                  </p>
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -598,7 +1461,7 @@ export default function Home() {
                   className={`tab-button ${activeTab === 'ocr' ? 'active' : ''}`}
                   onClick={() => setActiveTab('ocr')}
                 >
-                  🔍 OCR Text Extraction
+                  🔍 Extract Text from Images
                 </button>
               </div>
 
@@ -741,7 +1604,7 @@ export default function Home() {
                     marginBottom: '12px',
                     textAlign: 'center'
                   }}>
-                    AI-Powered Text Extraction
+                    Extract Text from Images & Scanned Documents
                   </h2>
                   <p style={{
                     fontSize: '16px',
@@ -751,7 +1614,7 @@ export default function Home() {
                     maxWidth: '700px',
                     margin: '0 auto 32px auto'
                   }}>
-                    Extract text from PDFs and images using advanced AI technology
+                    Turn photos, screenshots, and scanned PDFs into editable text in seconds
                   </p>
 
                   {!ocrState.isProcessing && !ocrState.result && (
@@ -796,7 +1659,7 @@ export default function Home() {
                         </p>
                       </div>
                       <button onClick={handleOCR} className="btn-primary">
-                        Extract Text with AI
+                        Extract Text Now
                       </button>
                     </div>
                   )}
@@ -813,10 +1676,10 @@ export default function Home() {
                         animation: 'spin 1s linear infinite'
                       }} />
                       <p style={{ fontSize: '18px', fontWeight: '600', color: '#1a202c', marginBottom: '8px' }}>
-                        Processing with AI...
+                        Processing your document...
                       </p>
                       <p style={{ fontSize: '14px', color: '#718096' }}>
-                        Extracting text from your document
+                        Extracting text and recognizing characters
                       </p>
                     </div>
                   )}
@@ -900,219 +1763,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Tools Grid */}
-        <section style={{ padding: '60px 0', background: 'white' }}>
-          <div className="container">
-            <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-              <h2 style={{
-                fontSize: '36px',
-                fontWeight: '700',
-                color: '#1a202c',
-                marginBottom: '12px'
-              }}>
-                All Document Tools
-              </h2>
-              <p style={{ fontSize: '18px', color: '#718096' }}>
-                Professional conversion tools for all your document needs
-              </p>
-            </div>
-
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '24px'
-            }}>
-              <a href="/pdf-to-word" className="tool-card">
-                <div style={{
-                  width: '56px',
-                  height: '56px',
-                  background: '#f7fafc',
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 16px',
-                  fontSize: '24px'
-                }}>
-                  📄
-                </div>
-                <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '600',
-                  color: '#1a202c',
-                  marginBottom: '8px'
-                }}>
-                  PDF to Word
-                </h3>
-                <p style={{ fontSize: '14px', color: '#718096' }}>
-                  Convert PDF to editable Word format
-                </p>
-              </a>
-
-              <a href="/word-to-pdf" className="tool-card">
-                <div style={{
-                  width: '56px',
-                  height: '56px',
-                  background: '#f7fafc',
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 16px',
-                  fontSize: '24px'
-                }}>
-                  📝
-                </div>
-                <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '600',
-                  color: '#1a202c',
-                  marginBottom: '8px'
-                }}>
-                  Word to PDF
-                </h3>
-                <p style={{ fontSize: '14px', color: '#718096' }}>
-                  Create professional PDF documents
-                </p>
-              </a>
-
-              <a href="/invoice-generator" className="tool-card">
-                <div style={{
-                  width: '56px',
-                  height: '56px',
-                  background: '#f7fafc',
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 16px',
-                  fontSize: '24px'
-                }}>
-                  💼
-                </div>
-                <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '600',
-                  color: '#1a202c',
-                  marginBottom: '8px'
-                }}>
-                  Invoice Generator
-                </h3>
-                <p style={{ fontSize: '14px', color: '#718096' }}>
-                  Generate professional invoices
-                </p>
-              </a>
-
-              <a href="/pdf-split" className="tool-card">
-                <div style={{
-                  width: '56px',
-                  height: '56px',
-                  background: '#f7fafc',
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 16px',
-                  fontSize: '24px'
-                }}>
-                  ✂️
-                </div>
-                <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '600',
-                  color: '#1a202c',
-                  marginBottom: '8px'
-                }}>
-                  Split PDF
-                </h3>
-                <p style={{ fontSize: '14px', color: '#718096' }}>
-                  Extract pages from PDF files
-                </p>
-              </a>
-
-              <a href="/pdf-merge" className="tool-card">
-                <div style={{
-                  width: '56px',
-                  height: '56px',
-                  background: '#f7fafc',
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 16px',
-                  fontSize: '24px'
-                }}>
-                  🔗
-                </div>
-                <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '600',
-                  color: '#1a202c',
-                  marginBottom: '8px'
-                }}>
-                  Merge PDF
-                </h3>
-                <p style={{ fontSize: '14px', color: '#718096' }}>
-                  Combine multiple PDF files
-                </p>
-              </a>
-
-              <a href="/image-converter" className="tool-card">
-                <div style={{
-                  width: '56px',
-                  height: '56px',
-                  background: '#f7fafc',
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 16px',
-                  fontSize: '24px'
-                }}>
-                  🖼️
-                </div>
-                <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '600',
-                  color: '#1a202c',
-                  marginBottom: '8px'
-                }}>
-                  Image Converter
-                </h3>
-                <p style={{ fontSize: '14px', color: '#718096' }}>
-                  Convert between image formats
-                </p>
-              </a>
-
-              <a href="/ocr" className="tool-card">
-                <div style={{
-                  width: '56px',
-                  height: '56px',
-                  background: '#f7fafc',
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  margin: '0 auto 16px',
-                  fontSize: '24px'
-                }}>
-                  🔍
-                </div>
-                <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '600',
-                  color: '#1a202c',
-                  marginBottom: '8px'
-                }}>
-                  Scan Text (OCR)
-                </h3>
-                <p style={{ fontSize: '14px', color: '#718096' }}>
-                  Extract text from PDFs and images
-                </p>
-              </a>
-            </div>
-          </div>
-        </section>
+        {/* Featured Articles */}
 
         {/* Featured Articles */}
         {featuredArticles.length > 0 && (
@@ -1198,9 +1849,227 @@ export default function Home() {
           </section>
         )}
 
+        {/* How to Convert PDF to Word Section */}
+        <section style={{ padding: '60px 0', background: '#f7fafc' }}>
+          <div className="container">
+            <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+              <h2 style={{
+                fontSize: '36px',
+                fontWeight: '700',
+                color: '#1a202c',
+                marginBottom: '12px'
+              }}>
+                How to Convert PDF to Word Document
+              </h2>
+              <p style={{ fontSize: '18px', color: '#718096' }}>
+                Follow these simple steps to convert any PDF file to an editable Word document
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                <div style={{ display: 'flex', gap: '20px', background: 'white', padding: '24px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
+                  <div style={{
+                    minWidth: '48px',
+                    height: '48px',
+                    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                    borderRadius: '12px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white',
+                    fontSize: '20px',
+                    fontWeight: '700'
+                  }}>
+                    1
+                  </div>
+                  <div>
+                    <h3 style={{ fontSize: '20px', fontWeight: '600', color: '#1a202c', marginBottom: '8px' }}>
+                      Upload Your PDF File
+                    </h3>
+                    <p style={{ fontSize: '15px', color: '#718096', lineHeight: '1.6' }}>
+                      Click the upload area or drag and drop your PDF file. We support files up to 100MB. Your file is encrypted during upload for security.
+                    </p>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', gap: '20px', background: 'white', padding: '24px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
+                  <div style={{
+                    minWidth: '48px',
+                    height: '48px',
+                    background: 'linear-gradient(135deg, #48bb78 0%, #38a169 100%)',
+                    borderRadius: '12px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white',
+                    fontSize: '20px',
+                    fontWeight: '700'
+                  }}>
+                    2
+                  </div>
+                  <div>
+                    <h3 style={{ fontSize: '20px', fontWeight: '600', color: '#1a202c', marginBottom: '8px' }}>
+                      Choose Output Format
+                    </h3>
+                    <p style={{ fontSize: '15px', color: '#718096', lineHeight: '1.6' }}>
+                      Select DOCX (Microsoft Word), DOC (older Word format), or ODT (OpenDocument) as your output format. DOCX is recommended for best compatibility.
+                    </p>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', gap: '20px', background: 'white', padding: '24px', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>
+                  <div style={{
+                    minWidth: '48px',
+                    height: '48px',
+                    background: 'linear-gradient(135deg, #ed8936 0%, #dd6b20 100%)',
+                    borderRadius: '12px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white',
+                    fontSize: '20px',
+                    fontWeight: '700'
+                  }}>
+                    3
+                  </div>
+                  <div>
+                    <h3 style={{ fontSize: '20px', fontWeight: '600', color: '#1a202c', marginBottom: '8px' }}>
+                      Convert & Download
+                    </h3>
+                    <p style={{ fontSize: '15px', color: '#718096', lineHeight: '1.6' }}>
+                      Click "Convert to DOCX" and wait a few seconds while we process your file. Your converted Word document will automatically download when ready.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section style={{ padding: '60px 0', background: 'white' }}>
+          <div className="container">
+            <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+              <h2 style={{
+                fontSize: '36px',
+                fontWeight: '700',
+                color: '#1a202c',
+                marginBottom: '12px'
+              }}>
+                Frequently Asked Questions
+              </h2>
+              <p style={{ fontSize: '18px', color: '#718096' }}>
+                Everything you need to know about converting documents online
+              </p>
+            </div>
+
+            <div style={{ maxWidth: '900px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <div style={{ background: '#f7fafc', padding: '24px', borderRadius: '12px' }}>
+                <h3 style={{ fontSize: '18px', fontWeight: '600', color: '#1a202c', marginBottom: '12px' }}>
+                  Why does my PDF lose formatting when converted to Word?
+                </h3>
+                <p style={{ fontSize: '15px', color: '#718096', lineHeight: '1.6' }}>
+                  PDFs and Word documents work differently. PDFs place content at exact positions on a page, while Word uses flowing text. Complex layouts with multiple columns, text boxes, or custom fonts may shift slightly. For best results, use the DOCX format and check the "Preserve Layout" option if available. Scanned PDFs require text extraction first, which may not preserve the original layout.
+                </p>
+              </div>
+
+              <div style={{ background: '#f7fafc', padding: '24px', borderRadius: '12px' }}>
+                <h3 style={{ fontSize: '18px', fontWeight: '600', color: '#1a202c', marginBottom: '12px' }}>
+                  Can I convert scanned PDFs or images with text?
+                </h3>
+                <p style={{ fontSize: '15px', color: '#718096', lineHeight: '1.6' }}>
+                  Yes! Use the "Extract Text from Images" tab above. Our text recognition technology analyzes scanned documents, photos of paper, screenshots, and image-based PDFs to extract all readable text. This works with printed text, typed documents, and even some clear handwriting. The accuracy depends on image quality - higher resolution images produce better results.
+                </p>
+              </div>
+
+              <div style={{ background: '#f7fafc', padding: '24px', borderRadius: '12px' }}>
+                <h3 style={{ fontSize: '18px', fontWeight: '600', color: '#1a202c', marginBottom: '12px' }}>
+                  Are there file size limits for conversion?
+                </h3>
+                <p style={{ fontSize: '15px', color: '#718096', lineHeight: '1.6' }}>
+                  We support files up to 100MB per upload. Most documents are well under this limit - a typical 50-page PDF with images is around 5-10MB. If you have a larger file, try splitting it into smaller sections using our PDF Split tool first, then converting each section separately.
+                </p>
+              </div>
+
+              <div style={{ background: '#f7fafc', padding: '24px', borderRadius: '12px' }}>
+                <h3 style={{ fontSize: '18px', fontWeight: '600', color: '#1a202c', marginBottom: '12px' }}>
+                  Is my data safe? Do you store my files?
+                </h3>
+                <p style={{ fontSize: '15px', color: '#718096', lineHeight: '1.6' }}>
+                  Your privacy is our priority. All uploads are encrypted using SSL/TLS. Files are processed in isolated containers and automatically deleted from our servers within 60 seconds after conversion. We never view, store, or share your documents. We don't require registration, so we don't collect personal information unless you contact us.
+                </p>
+              </div>
+
+              <div style={{ background: '#f7fafc', padding: '24px', borderRadius: '12px' }}>
+                <h3 style={{ fontSize: '18px', fontWeight: '600', color: '#1a202c', marginBottom: '12px' }}>
+                  What's the difference between DOCX, DOC, and ODT formats?
+                </h3>
+                <p style={{ fontSize: '15px', color: '#718096', lineHeight: '1.6' }}>
+                  DOCX is the modern Microsoft Word format (2007 and later) and is recommended for most users. It offers the best compatibility and smaller file sizes. DOC is the older Word format (97-2003) - use this only if you need to open files in very old versions of Word. ODT is the OpenDocument Text format used by LibreOffice and OpenOffice - choose this if you use open-source office software.
+                </p>
+              </div>
+
+              <div style={{ background: '#f7fafc', padding: '24px', borderRadius: '12px' }}>
+                <h3 style={{ fontSize: '18px', fontWeight: '600', color: '#1a202c', marginBottom: '12px' }}>
+                  Can I convert multiple files at once?
+                </h3>
+                <p style={{ fontSize: '15px', color: '#718096', lineHeight: '1.6' }}>
+                  Currently, files are processed one at a time to ensure the fastest conversion speed for each document. To convert multiple files, simply repeat the process for each file. The conversion typically takes only 3-5 seconds per file, so processing multiple documents is still very quick. We prioritize speed and accuracy over batch processing because individual file handling allows us to optimize each conversion for the specific document type, layout complexity, and content. This approach also maintains maximum security by isolating each conversion in its own secure container.
+                </p>
+              </div>
+
+              <div style={{ background: '#f7fafc', padding: '24px', borderRadius: '12px' }}>
+                <h3 style={{ fontSize: '18px', fontWeight: '600', color: '#1a202c', marginBottom: '12px' }}>
+                  Why would I convert Word to PDF?
+                </h3>
+                <p style={{ fontSize: '15px', color: '#718096', lineHeight: '1.6' }}>
+                  Converting to PDF is ideal when you want to share documents that should look the same on any device. PDFs prevent accidental edits, preserve exact formatting regardless of fonts installed, and are universally readable. Use PDF format for resumes, contracts, forms, ebooks, and any document you want to distribute without allowing changes. PDFs also reduce file size in many cases, making them perfect for email attachments. Additionally, PDF/A format ensures long-term archival compliance for legal and regulatory requirements. Many organizations and job application systems specifically require PDF format for submissions because it guarantees document integrity and prevents viruses that can hide in editable formats.
+                </p>
+              </div>
+
+              <div style={{ background: '#f7fafc', padding: '24px', borderRadius: '12px' }}>
+                <h3 style={{ fontSize: '18px', fontWeight: '600', color: '#1a202c', marginBottom: '12px' }}>
+                  What file formats do you support for conversion?
+                </h3>
+                <p style={{ fontSize: '15px', color: '#718096', lineHeight: '1.6' }}>
+                  We support comprehensive format conversion including: PDF to DOCX/DOC/ODT/TXT, Word (DOCX/DOC) to PDF, Excel (XLSX/XLS) to PDF, PowerPoint (PPTX/PPT) to PDF, images (JPG/PNG/BMP/TIFF/GIF) to PDF, PDF to JPG/PNG, RTF to PDF/DOCX, ODT to PDF/DOCX, and HTML to PDF. Our OCR system extracts text from images, scanned PDFs, photos, and screenshots in over 100 languages. For specialized needs, we also offer tools for splitting PDFs (extract specific pages), merging PDFs (combine multiple files), compressing PDFs (reduce file size without quality loss), rotating PDF pages, and adding digital signatures to PDFs.
+                </p>
+              </div>
+
+              <div style={{ background: '#f7fafc', padding: '24px', borderRadius: '12px' }}>
+                <h3 style={{ fontSize: '18px', fontWeight: '600', color: '#1a202c', marginBottom: '12px' }}>
+                  How accurate is your PDF to Word conversion?
+                </h3>
+                <p style={{ fontSize: '15px', color: '#718096', lineHeight: '1.6' }}>
+                  Our conversion engine achieves 99.7% accuracy in preserving document structure, formatting, and content. This includes maintaining paragraph styles, headings, bullet points, numbered lists, tables with borders and shading, embedded images with original positioning, headers and footers, page numbers, hyperlinks, and text formatting (bold, italic, underline, font families, and sizes). Complex elements like multi-column layouts, text boxes, charts, and diagrams are reconstructed with high fidelity. The accuracy may be slightly lower for PDFs created from scanned documents or those with unusual fonts, but our OCR technology can extract text even from image-based PDFs. For optimal results, start with a high-quality PDF that was originally created digitally rather than scanned from paper.
+                </p>
+              </div>
+
+              <div style={{ background: '#f7fafc', padding: '24px', borderRadius: '12px' }}>
+                <h3 style={{ fontSize: '18px', fontWeight: '600', color: '#1a202c', marginBottom: '12px' }}>
+                  Do you support password-protected PDFs?
+                </h3>
+                <p style={{ fontSize: '15px', color: '#718096', lineHeight: '1.6' }}>
+                  If you know the password to open a PDF, you can convert it by first opening the file in a PDF reader, removing the password protection in the security settings, saving it as an unprotected PDF, then uploading it to our converter. We cannot bypass PDF passwords as this would violate security principles and potentially enable unauthorized access to protected documents. For password-protected PDFs, you must have the owner password (which allows editing) or user password (which allows opening) to remove restrictions legally and ethically before conversion.
+                </p>
+              </div>
+
+              <div style={{ background: '#f7fafc', padding: '24px', borderRadius: '12px' }}>
+                <h3 style={{ fontSize: '18px', fontWeight: '600', color: '#1a202c', marginBottom: '12px' }}>
+                  Can your OCR read handwritten text?
+                </h3>
+                <p style={{ fontSize: '15px', color: '#718096', lineHeight: '1.6' }}>
+                  Our OCR technology is optimized for printed and typed text, where it achieves the highest accuracy. It can recognize some clear, legible handwriting - particularly block letters and neat cursive - but accuracy varies significantly based on handwriting style, clarity, and consistency. For best results with handwritten documents, ensure good lighting, high image resolution (at least 300 DPI), clear contrast between text and background, and consistent letter formation. Printed forms with handwritten entries work better than fully handwritten notes. For critical handwritten documents, we recommend reviewing and correcting the extracted text manually after OCR processing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Ad Space */}
         {!conversionState.isConverting && !ocrState.isProcessing && (
-          <section style={{ padding: '40px 0', background: 'white' }}>
+          <section style={{ padding: '40px 0', background: '#f7fafc' }}>
             <div className="container" style={{ textAlign: 'center' }}>
               <AdSenseAd
                 adSlot="1234567890"
@@ -1212,7 +2081,7 @@ export default function Home() {
           </section>
         )}
 
-        {/* Features Section */}
+        {/* Professional Document Conversion Platform Section */}
         <section style={{ padding: '60px 0', background: 'white' }}>
           <div className="container">
             <div style={{ textAlign: 'center', marginBottom: '48px' }}>
@@ -1222,17 +2091,96 @@ export default function Home() {
                 color: '#1a202c',
                 marginBottom: '12px'
               }}>
+                Professional Document Conversion Made Simple
+              </h2>
+              <p style={{ fontSize: '18px', color: '#718096', maxWidth: '900px', margin: '0 auto 24px' }}>
+                Our advanced document conversion platform combines cutting-edge AI technology with user-friendly tools to handle all your document processing needs. Whether you're converting PDFs to editable formats, extracting text from images, or generating professional business documents, we provide enterprise-grade quality completely free.
+              </p>
+            </div>
+
+            {/* Detailed Feature Breakdown */}
+            <div style={{ maxWidth: '1000px', margin: '0 auto 60px', background: '#f8fafc', borderRadius: '16px', padding: '40px 32px' }}>
+              <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#1a202c', marginBottom: '24px', textAlign: 'center' }}>
+                Advanced Features That Set Us Apart
+              </h3>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '28px' }}>
+                <div>
+                  <h4 style={{ fontSize: '19px', fontWeight: '600', color: '#1a202c', marginBottom: '10px' }}>
+                    🎯 99.7% Conversion Accuracy
+                  </h4>
+                  <p style={{ fontSize: '15px', color: '#4a5568', lineHeight: '1.7' }}>
+                    Our conversion engine uses advanced algorithms to preserve formatting, fonts, images, tables, and layout structure. Unlike basic converters that produce garbled results, our technology maintains document integrity through intelligent parsing and reconstruction. This means your converted documents look virtually identical to the originals, saving you hours of manual reformatting.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 style={{ fontSize: '19px', fontWeight: '600', color: '#1a202c', marginBottom: '10px' }}>
+                    🤖 AI-Powered Text Recognition (OCR)
+                  </h4>
+                  <p style={{ fontSize: '15px', color: '#4a5568', lineHeight: '1.7' }}>
+                    Extract text from scanned documents, photos, screenshots, and image-based PDFs with industry-leading accuracy. Our multi-language recognition supports over 100 languages including English, Spanish, French, German, Chinese, Japanese, and Arabic. The system automatically detects text orientation, handles mixed fonts and sizes, and even recognizes text in complex layouts like invoices, receipts, and business cards.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 style={{ fontSize: '19px', fontWeight: '600', color: '#1a202c', marginBottom: '10px' }}>
+                    🔒 Enterprise-Grade Security & Privacy
+                  </h4>
+                  <p style={{ fontSize: '15px', color: '#4a5568', lineHeight: '1.7' }}>
+                    Your documents are encrypted using AES-256 encryption during upload and processing. All conversions happen in isolated, secure containers that are completely wiped after 60 seconds. We don't require registration or collect personal data, ensuring your privacy is protected. Our infrastructure is GDPR compliant and regularly audited for security vulnerabilities. Perfect for handling confidential business documents, legal contracts, medical records, and financial statements.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 style={{ fontSize: '19px', fontWeight: '600', color: '#1a202c', marginBottom: '10px' }}>
+                    ⚡ Lightning-Fast Processing Speed
+                  </h4>
+                  <p style={{ fontSize: '15px', color: '#4a5568', lineHeight: '1.7' }}>
+                    Most conversions complete in under 5 seconds, even for large files up to 100MB. Our distributed cloud infrastructure automatically scales to handle traffic spikes, ensuring consistent performance 24/7. Unlike desktop software that slows down your computer, our web-based platform uses powerful server processing while your device stays responsive.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 style={{ fontSize: '19px', fontWeight: '600', color: '#1a202c', marginBottom: '10px' }}>
+                    🌍 Cross-Platform Compatibility
+                  </h4>
+                  <p style={{ fontSize: '15px', color: '#4a5568', lineHeight: '1.7' }}>
+                    Works seamlessly on Windows, macOS, Linux, iOS, Android, and ChromeOS. Access your conversion tools from any modern web browser including Chrome, Firefox, Safari, and Edge. No software installation, no system requirements, no compatibility issues. Perfect for teams working across different operating systems or individuals who switch between devices.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 style={{ fontSize: '19px', fontWeight: '600', color: '#1a202c', marginBottom: '10px' }}>
+                    💎 Professional-Quality Output
+                  </h4>
+                  <p style={{ fontSize: '15px', color: '#4a5568', lineHeight: '1.7' }}>
+                    Generate documents that meet professional and academic standards. Our DOCX output is fully compatible with Microsoft Word 2007 and later, Google Docs, and LibreOffice. PDF output conforms to PDF/A standards for long-term archiving. Images maintain their original resolution and quality. Tables, charts, and graphics are preserved with pixel-perfect accuracy.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Value Proposition Grid */}
+            <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+              <h2 style={{
+                fontSize: '36px',
+                fontWeight: '700',
+                color: '#1a202c',
+                marginBottom: '12px'
+              }}>
                 Why Choose Our Platform?
               </h2>
-              <p style={{ fontSize: '18px', color: '#718096' }}>
-                Enterprise-grade tools with consumer-friendly experience
+              <p style={{ fontSize: '18px', color: '#718096', maxWidth: '800px', margin: '0 auto' }}>
+                Save time and money while getting professional results with our comprehensive document toolkit
               </p>
             </div>
 
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '32px'
+              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+              gap: '32px',
+              marginBottom: '60px'
             }}>
               <div style={{ textAlign: 'center' }}>
                 <div style={{
@@ -1246,7 +2194,7 @@ export default function Home() {
                   margin: '0 auto 20px',
                   fontSize: '28px'
                 }}>
-                  🤖
+                  💰
                 </div>
                 <h3 style={{
                   fontSize: '20px',
@@ -1254,14 +2202,14 @@ export default function Home() {
                   color: '#1a202c',
                   marginBottom: '12px'
                 }}>
-                  AI-Powered OCR
+                  Save Money on Software
                 </h3>
                 <p style={{
                   fontSize: '15px',
                   color: '#718096',
                   lineHeight: '1.6'
                 }}>
-                  Advanced AI technology extracts text with industry-leading accuracy
+                  No need to purchase Adobe Acrobat ($239/year) or Microsoft Office ($99/year). Convert unlimited files completely free with no hidden costs or subscription fees.
                 </p>
               </div>
 
@@ -1285,14 +2233,14 @@ export default function Home() {
                   color: '#1a202c',
                   marginBottom: '12px'
                 }}>
-                  Lightning Fast
+                  Instant Access Anywhere
                 </h3>
                 <p style={{
                   fontSize: '15px',
                   color: '#718096',
                   lineHeight: '1.6'
                 }}>
-                  Average conversion time of 3.2 seconds with optimized processing
+                  Works on any device with a browser - Windows, Mac, Linux, tablets, and phones. No installation, no downloads, no updates. Just upload and convert in seconds.
                 </p>
               </div>
 
@@ -1316,15 +2264,82 @@ export default function Home() {
                   color: '#1a202c',
                   marginBottom: '12px'
                 }}>
-                  Secure & Private
+                  Your Privacy Protected
                 </h3>
                 <p style={{
                   fontSize: '15px',
                   color: '#718096',
                   lineHeight: '1.6'
                 }}>
-                  Files automatically deleted after 60 seconds. ISO 27001 certified
+                  All files are encrypted during upload and automatically deleted from our servers after 60 seconds. We never store, view, or share your documents with anyone.
                 </p>
+              </div>
+            </div>
+
+            {/* Common Use Cases */}
+            <div style={{ background: '#f7fafc', borderRadius: '16px', padding: '48px 32px' }}>
+              <h3 style={{
+                fontSize: '28px',
+                fontWeight: '700',
+                color: '#1a202c',
+                marginBottom: '32px',
+                textAlign: 'center'
+              }}>
+                Common Document Conversion Scenarios
+              </h3>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                gap: '24px'
+              }}>
+                <div style={{ background: 'white', borderRadius: '12px', padding: '24px' }}>
+                  <h4 style={{ fontSize: '18px', fontWeight: '600', color: '#1a202c', marginBottom: '12px' }}>
+                    📄 Edit PDF Contracts & Forms
+                  </h4>
+                  <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.6' }}>
+                    Convert PDF contracts, job applications, or legal documents to Word format so you can fill in fields, make edits, and add your information before signing.
+                  </p>
+                </div>
+                <div style={{ background: 'white', borderRadius: '12px', padding: '24px' }}>
+                  <h4 style={{ fontSize: '18px', fontWeight: '600', color: '#1a202c', marginBottom: '12px' }}>
+                    📸 Digitize Paper Documents
+                  </h4>
+                  <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.6' }}>
+                    Take a photo of receipts, invoices, business cards, or handwritten notes and extract the text for easy copying, searching, or archiving in digital format.
+                  </p>
+                </div>
+                <div style={{ background: 'white', borderRadius: '12px', padding: '24px' }}>
+                  <h4 style={{ fontSize: '18px', fontWeight: '600', color: '#1a202c', marginBottom: '12px' }}>
+                    💼 Create Professional PDFs
+                  </h4>
+                  <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.6' }}>
+                    Convert Word resumes, proposals, or reports to PDF format for professional sharing. PDFs maintain formatting across all devices and can't be accidentally edited.
+                  </p>
+                </div>
+                <div style={{ background: 'white', borderRadius: '12px', padding: '24px' }}>
+                  <h4 style={{ fontSize: '18px', fontWeight: '600', color: '#1a202c', marginBottom: '12px' }}>
+                    📚 Extract Text from Books & Research
+                  </h4>
+                  <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.6' }}>
+                    Pull quotes and citations from PDF textbooks, research papers, or ebooks. Convert scanned book pages to searchable text for notes and academic work.
+                  </p>
+                </div>
+                <div style={{ background: 'white', borderRadius: '12px', padding: '24px' }}>
+                  <h4 style={{ fontSize: '18px', fontWeight: '600', color: '#1a202c', marginBottom: '12px' }}>
+                    ✂️ Split Large PDF Files
+                  </h4>
+                  <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.6' }}>
+                    Extract specific pages from multi-page PDFs like manuals, reports, or presentations. Perfect for sharing only relevant sections or reducing file sizes.
+                  </p>
+                </div>
+                <div style={{ background: 'white', borderRadius: '12px', padding: '24px' }}>
+                  <h4 style={{ fontSize: '18px', fontWeight: '600', color: '#1a202c', marginBottom: '12px' }}>
+                    🔗 Combine Multiple Documents
+                  </h4>
+                  <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.6' }}>
+                    Merge separate PDFs into one complete document. Combine contracts with amendments, compile reports with appendices, or create complete presentation decks.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -1362,7 +2377,7 @@ export default function Home() {
                   <h3 style={{ fontSize: '18px', fontWeight: '600' }}>Document Converter Pro</h3>
                 </div>
                 <p style={{ fontSize: '14px', color: '#a0aec0', lineHeight: '1.6' }}>
-                  Professional AI-powered document tools trusted by businesses worldwide.
+                  Free online document conversion tools for PDFs, Word documents, images, and more. No registration required.
                 </p>
               </div>
 
@@ -1393,7 +2408,7 @@ export default function Home() {
               textAlign: 'center'
             }}>
               <p style={{ fontSize: '14px', color: '#a0aec0' }}>
-                © 2025 Document Converter Pro. All rights reserved. Powered by AI & LibreOffice.
+                © 2025 Document Converter Pro. All rights reserved.
               </p>
             </div>
           </div>
