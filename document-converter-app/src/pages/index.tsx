@@ -605,7 +605,7 @@ export default function Home() {
                 color: '#6366f1',
                 letterSpacing: '0.5px'
               }}>
-                ✨ Professional Document Tools
+                ✨ Professional Tools & Expert Guides
               </div>
 
               <h1 style={{
@@ -616,7 +616,7 @@ export default function Home() {
                 letterSpacing: '-1.5px',
                 lineHeight: '1.15'
               }}>
-                Your <span className="gradient-text">Ultimate Hub</span> for Every Document Need
+                Your <span className="gradient-text">Complete Hub</span> for Documents & Knowledge
               </h1>
 
               <p style={{
@@ -625,10 +625,10 @@ export default function Home() {
                 marginBottom: '24px',
                 fontWeight: '400',
                 lineHeight: '1.6',
-                maxWidth: '600px',
+                maxWidth: '650px',
                 margin: '0 auto 24px'
               }}>
-                Transform, create, and optimize documents with our AI-powered suite. 100% free, no limits.
+                Free AI-powered tools plus comprehensive guides from document experts. Transform files, learn best practices, boost productivity - all in one place.
               </p>
 
               {/* Search Bar */}
