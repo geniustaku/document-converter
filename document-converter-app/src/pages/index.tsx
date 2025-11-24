@@ -1076,6 +1076,34 @@ export default function Home() {
                 </p>
               </a>
 
+              {/* Invoice Generator */}
+              <a href="/invoice-generator" className="tool-card">
+                <div style={{
+                  width: '64px',
+                  height: '64px',
+                  background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
+                  borderRadius: '16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  margin: '0 auto 20px',
+                  fontSize: '28px'
+                }}>
+                  🧾
+                </div>
+                <h3 style={{
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#1a202c',
+                  marginBottom: '8px'
+                }}>
+                  Invoice Generator
+                </h3>
+                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  Create professional invoices
+                </p>
+              </a>
+
               {/* Background Remover */}
               <a href="/background-remover" className="tool-card">
                 <div style={{
