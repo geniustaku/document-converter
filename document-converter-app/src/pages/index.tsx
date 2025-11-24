@@ -1467,6 +1467,160 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Latest Blog Articles Section */}
+        <section style={{ padding: '60px 0', background: 'linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%)' }}>
+          <div className="container">
+            <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+              <h2 style={{
+                fontSize: '32px',
+                fontWeight: '700',
+                color: '#1a202c',
+                marginBottom: '12px',
+                letterSpacing: '-0.5px'
+              }}>
+                📚 Expert Guides & Tutorials
+              </h2>
+              <p style={{ fontSize: '18px', color: '#64748b', fontWeight: '400', maxWidth: '700px', margin: '0 auto' }}>
+                Learn from comprehensive guides covering document management, productivity tips, and professional workflows
+              </p>
+            </div>
+
+            {featuredArticles.length > 0 ? (
+              <div>
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
+                  gap: '32px',
+                  marginBottom: '40px'
+                }}>
+                  {featuredArticles.slice(0, 3).map((article) => (
+                    <a
+                      key={article.id}
+                      href={`/blog/${article.slug}`}
+                      style={{
+                        textDecoration: 'none',
+                        display: 'block',
+                        background: 'white',
+                        borderRadius: '16px',
+                        overflow: 'hidden',
+                        border: '1px solid #e2e8f0',
+                        transition: 'all 0.3s ease',
+                        boxShadow: '0 2px 8px rgba(0,0,0,0.04)'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = 'translateY(-4px)';
+                        e.currentTarget.style.boxShadow = '0 12px 24px rgba(0,0,0,0.1)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.04)';
+                      }}
+                    >
+                      {article.featured_image && (
+                        <div style={{
+                          width: '100%',
+                          height: '180px',
+                          background: `linear-gradient(rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1)), url(${article.featured_image}) center/cover`,
+                          backgroundColor: '#f7fafc'
+                        }}></div>
+                      )}
+                      <div style={{ padding: '24px' }}>
+                        <div style={{
+                          display: 'inline-block',
+                          padding: '4px 12px',
+                          background: 'linear-gradient(135deg, #667eea15 0%, #764ba215 100%)',
+                          borderRadius: '12px',
+                          fontSize: '12px',
+                          fontWeight: '600',
+                          color: '#667eea',
+                          marginBottom: '12px'
+                        }}>
+                          {article.category}
+                        </div>
+                        <h3 style={{
+                          fontSize: '19px',
+                          fontWeight: '700',
+                          color: '#1a202c',
+                          marginBottom: '10px',
+                          lineHeight: '1.4',
+                          display: '-webkit-box',
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: 'vertical',
+                          overflow: 'hidden'
+                        }}>
+                          {article.title}
+                        </h3>
+                        <p style={{
+                          fontSize: '14px',
+                          color: '#718096',
+                          lineHeight: '1.6',
+                          marginBottom: '16px',
+                          display: '-webkit-box',
+                          WebkitLineClamp: 3,
+                          WebkitBoxOrient: 'vertical',
+                          overflow: 'hidden'
+                        }}>
+                          {article.excerpt}
+                        </p>
+                        <div style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'space-between',
+                          fontSize: '13px',
+                          color: '#a0aec0',
+                          paddingTop: '14px',
+                          borderTop: '1px solid #e2e8f0'
+                        }}>
+                          <span>📖 {article.reading_time} min read</span>
+                          <span style={{ color: '#667eea', fontWeight: '600' }}>Read More →</span>
+                        </div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+
+                <div style={{ textAlign: 'center' }}>
+                  <a
+                    href="/blog"
+                    style={{
+                      display: 'inline-block',
+                      padding: '14px 32px',
+                      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                      color: 'white',
+                      borderRadius: '12px',
+                      fontWeight: '600',
+                      fontSize: '16px',
+                      textDecoration: 'none',
+                      transition: 'all 0.3s ease',
+                      boxShadow: '0 4px 12px rgba(102, 126, 234, 0.3)'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = 'translateY(-2px)';
+                      e.currentTarget.style.boxShadow = '0 6px 20px rgba(102, 126, 234, 0.4)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = 'translateY(0)';
+                      e.currentTarget.style.boxShadow = '0 4px 12px rgba(102, 126, 234, 0.3)';
+                    }}
+                  >
+                    View All {featuredArticles.length} Articles →
+                  </a>
+                </div>
+              </div>
+            ) : (
+              <div style={{ textAlign: 'center', padding: '60px 20px' }}>
+                <div style={{
+                  fontSize: '48px',
+                  marginBottom: '16px'
+                }}>📚</div>
+                <p style={{ fontSize: '16px', color: '#718096' }}>
+                  Loading expert guides and tutorials...
+                </p>
+              </div>
+            )}
+          </div>
+        </section>
+
         {/* Main Conversion/OCR Section */}
         <section style={{ padding: '0 0 60px 0' }}>
           <div className="container">
