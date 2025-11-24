@@ -1480,9 +1480,173 @@ export default function Home() {
               }}>
                 📚 Expert Guides & Tutorials
               </h2>
-              <p style={{ fontSize: '18px', color: '#64748b', fontWeight: '400', maxWidth: '700px', margin: '0 auto' }}>
+              <p style={{ fontSize: '18px', color: '#64748b', fontWeight: '400', maxWidth: '700px', margin: '0 auto 32px' }}>
                 Learn from comprehensive guides covering document management, productivity tips, and professional workflows
               </p>
+
+              {/* Quick Category Navigation */}
+              <div style={{
+                display: 'flex',
+                gap: '12px',
+                flexWrap: 'wrap',
+                justifyContent: 'center',
+                marginTop: '24px'
+              }}>
+                <a
+                  href="/blog"
+                  style={{
+                    padding: '10px 20px',
+                    borderRadius: '24px',
+                    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                    color: 'white',
+                    fontWeight: '600',
+                    fontSize: '14px',
+                    textDecoration: 'none',
+                    transition: 'all 0.2s',
+                    boxShadow: '0 2px 8px rgba(102, 126, 234, 0.3)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(102, 126, 234, 0.4)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 2px 8px rgba(102, 126, 234, 0.3)';
+                  }}
+                >
+                  📖 All Articles
+                </a>
+                <a
+                  href="/blog?category=pdf-guides"
+                  style={{
+                    padding: '10px 20px',
+                    borderRadius: '24px',
+                    border: '2px solid #e2e8f0',
+                    background: 'white',
+                    color: '#4a5568',
+                    fontWeight: '600',
+                    fontSize: '14px',
+                    textDecoration: 'none',
+                    transition: 'all 0.2s'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = '#667eea';
+                    e.currentTarget.style.color = '#667eea';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = '#e2e8f0';
+                    e.currentTarget.style.color = '#4a5568';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                  }}
+                >
+                  📄 PDF Guides
+                </a>
+                <a
+                  href="/blog?category=productivity"
+                  style={{
+                    padding: '10px 20px',
+                    borderRadius: '24px',
+                    border: '2px solid #e2e8f0',
+                    background: 'white',
+                    color: '#4a5568',
+                    fontWeight: '600',
+                    fontSize: '14px',
+                    textDecoration: 'none',
+                    transition: 'all 0.2s'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = '#667eea';
+                    e.currentTarget.style.color = '#667eea';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = '#e2e8f0';
+                    e.currentTarget.style.color = '#4a5568';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                  }}
+                >
+                  ⚡ Productivity Tips
+                </a>
+                <a
+                  href="/blog?category=document-management"
+                  style={{
+                    padding: '10px 20px',
+                    borderRadius: '24px',
+                    border: '2px solid #e2e8f0',
+                    background: 'white',
+                    color: '#4a5568',
+                    fontWeight: '600',
+                    fontSize: '14px',
+                    textDecoration: 'none',
+                    transition: 'all 0.2s'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = '#667eea';
+                    e.currentTarget.style.color = '#667eea';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = '#e2e8f0';
+                    e.currentTarget.style.color = '#4a5568';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                  }}
+                >
+                  📁 Document Management
+                </a>
+                <a
+                  href="/blog?category=business-tools"
+                  style={{
+                    padding: '10px 20px',
+                    borderRadius: '24px',
+                    border: '2px solid #e2e8f0',
+                    background: 'white',
+                    color: '#4a5568',
+                    fontWeight: '600',
+                    fontSize: '14px',
+                    textDecoration: 'none',
+                    transition: 'all 0.2s'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = '#667eea';
+                    e.currentTarget.style.color = '#667eea';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = '#e2e8f0';
+                    e.currentTarget.style.color = '#4a5568';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                  }}
+                >
+                  💼 Business Tools
+                </a>
+                <a
+                  href="/blog?category=tutorials"
+                  style={{
+                    padding: '10px 20px',
+                    borderRadius: '24px',
+                    border: '2px solid #e2e8f0',
+                    background: 'white',
+                    color: '#4a5568',
+                    fontWeight: '600',
+                    fontSize: '14px',
+                    textDecoration: 'none',
+                    transition: 'all 0.2s'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = '#667eea';
+                    e.currentTarget.style.color = '#667eea';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = '#e2e8f0';
+                    e.currentTarget.style.color = '#4a5568';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                  }}
+                >
+                  🎓 How-To Tutorials
+                </a>
+              </div>
             </div>
 
             {featuredArticles.length > 0 ? (
