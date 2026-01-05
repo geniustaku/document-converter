@@ -134,23 +134,7 @@ async function updateInvoice(
       params.push({ name: 'terms', type: sql.NVarChar, value: input.terms });
     }
 
-    if (input.vat_rate !== undefined) {
-      // Recalculate amounts
-      const vatAmount = (currentInvoice.subtotal * input.vat_rate) / 100;
-      const totalAmount = currentInvoice.subtotal + vatAmount;
-      const balanceDue = totalAmount - currentInvoice.amount_paid;
-
-      updates.push('vat_rate = @vat_rate');
-      updates.push('vat_amount = @vat_amount');
-      updates.push('total_amount = @total_amount');
-      updates.push('balance_due = @balance_due');
-      params.push({ name: 'vat_rate', type: sql.Decimal, value: input.vat_rate });
-      params.push({ name: 'vat_amount', type: sql.Decimal, value: vatAmount });
-      params.push({ name: 'total_amount', type: sql.Decimal, value: totalAmount });
-      params.push({ name: 'balance_due', type: sql.Decimal, value: balanceDue });
-    }
-
-    // Update items if provided
+    // Update items if provided - this takes precedence for amount calculations
     if (input.items && input.items.length > 0) {
       // Delete existing items
       await query(
@@ -166,13 +150,17 @@ async function updateInvoice(
       const balanceDue = totalAmount - currentInvoice.amount_paid;
 
       updates.push('subtotal = @subtotal');
-      updates.push('vat_amount = @new_vat_amount');
-      updates.push('total_amount = @new_total_amount');
-      updates.push('balance_due = @new_balance_due');
+      if (input.vat_rate !== undefined) {
+        updates.push('vat_rate = @vat_rate');
+        params.push({ name: 'vat_rate', type: sql.Decimal, value: input.vat_rate });
+      }
+      updates.push('vat_amount = @vat_amount');
+      updates.push('total_amount = @total_amount');
+      updates.push('balance_due = @balance_due');
       params.push({ name: 'subtotal', type: sql.Decimal, value: subtotal });
-      params.push({ name: 'new_vat_amount', type: sql.Decimal, value: vatAmount });
-      params.push({ name: 'new_total_amount', type: sql.Decimal, value: totalAmount });
-      params.push({ name: 'new_balance_due', type: sql.Decimal, value: balanceDue });
+      params.push({ name: 'vat_amount', type: sql.Decimal, value: vatAmount });
+      params.push({ name: 'total_amount', type: sql.Decimal, value: totalAmount });
+      params.push({ name: 'balance_due', type: sql.Decimal, value: balanceDue });
 
       // Insert new items
       for (let i = 0; i < input.items.length; i++) {
@@ -190,6 +178,20 @@ async function updateInvoice(
           ]
         );
       }
+    } else if (input.vat_rate !== undefined) {
+      // Only update VAT rate if no items provided (otherwise it's handled above)
+      const vatAmount = (currentInvoice.subtotal * input.vat_rate) / 100;
+      const totalAmount = currentInvoice.subtotal + vatAmount;
+      const balanceDue = totalAmount - currentInvoice.amount_paid;
+
+      updates.push('vat_rate = @vat_rate');
+      updates.push('vat_amount = @vat_amount');
+      updates.push('total_amount = @total_amount');
+      updates.push('balance_due = @balance_due');
+      params.push({ name: 'vat_rate', type: sql.Decimal, value: input.vat_rate });
+      params.push({ name: 'vat_amount', type: sql.Decimal, value: vatAmount });
+      params.push({ name: 'total_amount', type: sql.Decimal, value: totalAmount });
+      params.push({ name: 'balance_due', type: sql.Decimal, value: balanceDue });
     }
 
     if (updates.length === 0) {
