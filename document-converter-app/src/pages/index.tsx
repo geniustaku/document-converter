@@ -251,11 +251,6 @@ export default function Home() {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   };
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
-  };
-
   const getReadingTime = (content: string) => {
     const wordsPerMinute = 200;
     const words = content.split(/\s+/).length;
@@ -317,10 +312,10 @@ export default function Home() {
         }
 
         body {
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+          font-family: 'Adobe Clean', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
           line-height: 1.6;
-          color: #1a202c;
-          background: #ffffff;
+          color: #323232;
+          background: #f4f4f4;
         }
 
         .container {
@@ -330,36 +325,35 @@ export default function Home() {
         }
 
         .gradient-text {
-          background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+          background: linear-gradient(135deg, #fa0f00 0%, #ff6b5b 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
         }
 
         .glass-card {
-          background: rgba(255, 255, 255, 0.95);
-          backdrop-filter: blur(20px);
-          border: 1px solid rgba(99, 102, 241, 0.1);
-          border-radius: 24px;
-          box-shadow: 0 20px 60px rgba(99, 102, 241, 0.08);
+          background: #ffffff;
+          border: 1px solid #e5e5e5;
+          border-radius: 8px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
 
         .btn-primary {
-          background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+          background: #fa0f00;
           color: white;
           border: none;
-          padding: 16px 40px;
-          border-radius: 16px;
+          padding: 14px 32px;
+          border-radius: 4px;
           font-weight: 600;
-          font-size: 16px;
+          font-size: 15px;
           cursor: pointer;
-          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+          transition: all 0.2s ease;
+          box-shadow: none;
         }
 
         .btn-primary:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 20px 40px rgba(99, 102, 241, 0.4);
+          background: #d10d00;
+          transform: translateY(-1px);
         }
 
         .btn-primary:disabled {
@@ -370,27 +364,27 @@ export default function Home() {
 
         .btn-secondary {
           background: white;
-          color: #4a5568;
-          border: 2px solid #e2e8f0;
+          color: #323232;
+          border: 1px solid #d0d0d0;
           padding: 12px 24px;
-          border-radius: 10px;
+          border-radius: 4px;
           font-weight: 500;
           cursor: pointer;
           transition: all 0.2s ease;
         }
 
         .btn-secondary:hover {
-          border-color: #cbd5e0;
-          background: #f7fafc;
+          border-color: #323232;
+          background: #fafafa;
         }
 
         .tool-card {
-          background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-          border: 2px solid #e2e8f0;
-          border-radius: 20px;
-          padding: 36px 28px;
+          background: #ffffff;
+          border: 1px solid #e5e5e5;
+          border-radius: 8px;
+          padding: 28px 24px;
           text-align: center;
-          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: all 0.2s ease;
           cursor: pointer;
           text-decoration: none;
           color: inherit;
@@ -402,31 +396,31 @@ export default function Home() {
         .tool-card::before {
           content: '';
           position: absolute;
-          top: 0;
+          bottom: 0;
           left: 0;
           right: 0;
-          bottom: 0;
-          background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
-          opacity: 0;
-          transition: opacity 0.4s ease;
+          height: 3px;
+          background: #fa0f00;
+          transform: scaleX(0);
+          transition: transform 0.2s ease;
         }
 
         .tool-card:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 30px 60px rgba(99, 102, 241, 0.15);
-          border-color: rgba(99, 102, 241, 0.3);
+          transform: translateY(-4px);
+          box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+          border-color: #d0d0d0;
         }
 
         .tool-card:hover::before {
-          opacity: 1;
+          transform: scaleX(1);
         }
 
         .article-card {
           background: white;
-          border: 1px solid #e2e8f0;
-          border-radius: 12px;
+          border: 1px solid #e5e5e5;
+          border-radius: 8px;
           padding: 24px;
-          transition: all 0.3s ease;
+          transition: all 0.2s ease;
           cursor: pointer;
           text-decoration: none;
           color: inherit;
@@ -436,39 +430,39 @@ export default function Home() {
 
         .article-card:hover {
           transform: translateY(-2px);
-          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
         }
 
         .tab-button {
           padding: 12px 24px;
           border: none;
           background: none;
-          font-size: 16px;
+          font-size: 15px;
           font-weight: 600;
           cursor: pointer;
-          color: #718096;
-          border-bottom: 3px solid transparent;
+          color: #6e6e6e;
+          border-bottom: 2px solid transparent;
           transition: all 0.2s ease;
         }
 
         .tab-button.active {
-          color: #667eea;
-          border-bottom-color: #667eea;
+          color: #fa0f00;
+          border-bottom-color: #fa0f00;
         }
 
         .ocr-result {
-          background: #ffffff;
-          border: 2px solid #e2e8f0;
-          border-radius: 8px;
+          background: #fafafa;
+          border: 1px solid #e5e5e5;
+          border-radius: 4px;
           padding: 20px;
           max-height: 400px;
           overflow-y: auto;
-          font-family: 'Courier New', monospace;
-          font-size: 14px;
+          font-family: 'Monaco', 'Consolas', monospace;
+          font-size: 13px;
           line-height: 1.8;
           white-space: pre-wrap;
           word-wrap: break-word;
-          color: #1a202c;
+          color: #323232;
           min-height: 200px;
         }
 
@@ -479,178 +473,131 @@ export default function Home() {
         }} />
       </Head>
 
-      <div style={{ minHeight: '100vh', background: '#fafafa' }}>
-        {/* Header - Premium Design */}
+      <div style={{ minHeight: '100vh', background: '#f4f4f4' }}>
+        {/* Header - Adobe Dark Design */}
         <header style={{
-          background: 'rgba(255, 255, 255, 0.95)',
-          backdropFilter: 'blur(20px)',
-          borderBottom: '1px solid rgba(226, 232, 240, 0.8)',
+          background: '#323232',
           position: 'sticky',
           top: 0,
-          zIndex: 100,
-          boxShadow: '0 1px 3px rgba(0, 0, 0, 0.05)'
+          zIndex: 100
         }}>
           <div className="container" style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            height: '80px'
+            height: '64px'
           }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <div style={{
-                width: '48px',
-                height: '48px',
-                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
-                borderRadius: '16px',
+                width: '36px',
+                height: '36px',
+                background: '#fa0f00',
+                borderRadius: '6px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: 'white',
-                fontSize: '24px',
-                fontWeight: 'bold',
-                boxShadow: '0 8px 20px rgba(99, 102, 241, 0.3)'
+                fontSize: '18px',
+                fontWeight: 'bold'
               }}>
-                📄
+                D
               </div>
               <div>
                 <h1 style={{
-                  fontSize: '22px',
-                  fontWeight: '800',
-                  background: 'linear-gradient(135deg, #0f172a 0%, #334155 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  letterSpacing: '-0.5px',
-                  marginBottom: '2px'
+                  fontSize: '18px',
+                  fontWeight: '700',
+                  color: '#ffffff',
+                  letterSpacing: '-0.3px',
+                  margin: 0
                 }}>
                   Document Converter Pro
                 </h1>
-                <div style={{
-                  fontSize: '11px',
-                  color: '#94a3b8',
-                  fontWeight: '600',
-                  letterSpacing: '1.2px',
-                  textTransform: 'uppercase'
-                }}>
-                  Professional Tools Suite
-                </div>
               </div>
             </div>
 
-            <nav style={{ display: 'flex', gap: '32px', alignItems: 'center' }}>
-              <a href="/blog" style={{ color: '#64748b', textDecoration: 'none', fontWeight: '600', fontSize: '15px', transition: 'color 0.2s' }}>Blog</a>
-              <a href="/faq" style={{ color: '#64748b', textDecoration: 'none', fontWeight: '600', fontSize: '15px', transition: 'color 0.2s' }}>FAQ</a>
-              <a href="/about" style={{ color: '#64748b', textDecoration: 'none', fontWeight: '600', fontSize: '15px', transition: 'color 0.2s' }}>About</a>
-              <div style={{
-                background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-                color: 'white',
-                padding: '10px 20px',
-                borderRadius: '24px',
-                fontSize: '12px',
-                fontWeight: '700',
-                letterSpacing: '0.5px',
-                boxShadow: '0 4px 15px rgba(16, 185, 129, 0.3)',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '6px'
-              }}>
-                <span style={{ fontSize: '8px' }}>●</span>
-                ONLINE
-              </div>
+            <nav style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+              <a href="/blog" style={{ color: '#b3b3b3', textDecoration: 'none', fontWeight: '500', fontSize: '14px', padding: '8px 16px', borderRadius: '4px', transition: 'all 0.2s' }}
+                 onMouseEnter={(e) => { e.currentTarget.style.color = '#ffffff'; e.currentTarget.style.background = 'rgba(255,255,255,0.1)'; }}
+                 onMouseLeave={(e) => { e.currentTarget.style.color = '#b3b3b3'; e.currentTarget.style.background = 'transparent'; }}>Blog</a>
+              <a href="/faq" style={{ color: '#b3b3b3', textDecoration: 'none', fontWeight: '500', fontSize: '14px', padding: '8px 16px', borderRadius: '4px', transition: 'all 0.2s' }}
+                 onMouseEnter={(e) => { e.currentTarget.style.color = '#ffffff'; e.currentTarget.style.background = 'rgba(255,255,255,0.1)'; }}
+                 onMouseLeave={(e) => { e.currentTarget.style.color = '#b3b3b3'; e.currentTarget.style.background = 'transparent'; }}>FAQ</a>
+              <a href="/about" style={{ color: '#b3b3b3', textDecoration: 'none', fontWeight: '500', fontSize: '14px', padding: '8px 16px', borderRadius: '4px', transition: 'all 0.2s' }}
+                 onMouseEnter={(e) => { e.currentTarget.style.color = '#ffffff'; e.currentTarget.style.background = 'rgba(255,255,255,0.1)'; }}
+                 onMouseLeave={(e) => { e.currentTarget.style.color = '#b3b3b3'; e.currentTarget.style.background = 'transparent'; }}>About</a>
+              <a href="/billing/login" style={{
+                color: '#ffffff',
+                textDecoration: 'none',
+                fontWeight: '600',
+                fontSize: '14px',
+                padding: '8px 20px',
+                borderRadius: '4px',
+                background: '#fa0f00',
+                marginLeft: '8px',
+                transition: 'all 0.2s'
+              }}
+                 onMouseEnter={(e) => { e.currentTarget.style.background = '#d10d00'; }}
+                 onMouseLeave={(e) => { e.currentTarget.style.background = '#fa0f00'; }}>Client Portal</a>
             </nav>
           </div>
         </header>
 
-        {/* Hero Section - Compact & Modern */}
+        {/* Hero Section - Clean Adobe Style */}
         <section style={{
-          padding: '40px 0 32px 0',
-          background: 'radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.05) 0%, transparent 50%), linear-gradient(180deg, #fafbff 0%, #ffffff 100%)',
-          position: 'relative',
-          overflow: 'hidden'
+          padding: '48px 0 40px 0',
+          background: '#ffffff',
+          borderBottom: '1px solid #e5e5e5'
         }}>
-          {/* Decorative elements */}
-          <div style={{
-            position: 'absolute',
-            top: '-50px',
-            right: '-50px',
-            width: '300px',
-            height: '300px',
-            background: 'radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%)',
-            borderRadius: '50%',
-            filter: 'blur(50px)',
-            pointerEvents: 'none'
-          }} />
-          <div style={{
-            position: 'absolute',
-            bottom: '-50px',
-            left: '-50px',
-            width: '300px',
-            height: '300px',
-            background: 'radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%)',
-            borderRadius: '50%',
-            filter: 'blur(50px)',
-            pointerEvents: 'none'
-          }} />
-
-          <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-            <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-              <div style={{
-                display: 'inline-block',
-                background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
-                border: '2px solid rgba(99, 102, 241, 0.2)',
-                borderRadius: '50px',
-                padding: '6px 18px',
-                marginBottom: '16px',
-                fontSize: '12px',
-                fontWeight: '600',
-                color: '#6366f1',
-                letterSpacing: '0.5px'
-              }}>
-                ✨ Professional Tools & Expert Guides
-              </div>
-
+          <div className="container">
+            <div style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto' }}>
               <h1 style={{
-                fontSize: '42px',
-                fontWeight: '900',
-                color: '#0f172a',
-                marginBottom: '14px',
-                letterSpacing: '-1.5px',
-                lineHeight: '1.15'
+                fontSize: '40px',
+                fontWeight: '700',
+                color: '#323232',
+                marginBottom: '16px',
+                letterSpacing: '-0.5px',
+                lineHeight: '1.2'
               }}>
-                Your <span className="gradient-text">Complete Hub</span> for Documents & Knowledge
+                Professional <span className="gradient-text">Document Tools</span>
               </h1>
 
               <p style={{
-                fontSize: '16px',
-                color: '#64748b',
-                marginBottom: '24px',
+                fontSize: '17px',
+                color: '#6e6e6e',
+                marginBottom: '32px',
                 fontWeight: '400',
                 lineHeight: '1.6',
-                maxWidth: '650px',
-                margin: '0 auto 24px'
+                maxWidth: '560px',
+                margin: '0 auto 32px'
               }}>
-                Free AI-powered tools plus comprehensive guides from document experts. Transform files, learn best practices, boost productivity - all in one place.
+                Convert, compress, merge, and transform your documents with enterprise-grade tools. Free, fast, and secure.
               </p>
 
               {/* Search Bar */}
               <div style={{
-                maxWidth: '550px',
-                margin: '0 auto',
+                maxWidth: '500px',
+                margin: '0 auto 24px',
                 position: 'relative'
               }}>
-                <div style={{
-                  position: 'absolute',
-                  left: '20px',
-                  top: '50%',
-                  transform: 'translateY(-50%)',
-                  fontSize: '18px',
-                  color: '#94a3b8',
-                  pointerEvents: 'none'
-                }}>
-                  🔍
-                </div>
+                <svg
+                  style={{
+                    position: 'absolute',
+                    left: '16px',
+                    top: '50%',
+                    transform: 'translateY(-50%)',
+                    width: '18px',
+                    height: '18px',
+                    color: '#959595'
+                  }}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
                 <input
                   type="text"
-                  placeholder="Search tools... (PDF to Word, Resume Builder, OCR)"
+                  placeholder="Search tools... (PDF to Word, OCR, Merge)"
                   onChange={(e) => {
                     const search = e.target.value.toLowerCase();
                     const cards = document.querySelectorAll('.tool-card');
@@ -661,76 +608,66 @@ export default function Home() {
                   }}
                   style={{
                     width: '100%',
-                    padding: '16px 20px 16px 52px',
-                    fontSize: '15px',
-                    fontWeight: '500',
-                    color: '#0f172a',
-                    backgroundColor: '#ffffff',
-                    border: '2px solid #e2e8f0',
-                    borderRadius: '14px',
+                    padding: '14px 16px 14px 46px',
+                    fontSize: '14px',
+                    fontWeight: '400',
+                    color: '#323232',
+                    backgroundColor: '#fafafa',
+                    border: '1px solid #d0d0d0',
+                    borderRadius: '4px',
                     outline: 'none',
-                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.06)',
                     transition: 'all 0.2s ease'
                   }}
                   onFocus={(e) => {
-                    e.target.style.borderColor = '#667eea';
-                    e.target.style.boxShadow = '0 4px 24px rgba(102, 126, 234, 0.15)';
+                    e.target.style.borderColor = '#323232';
+                    e.target.style.backgroundColor = '#ffffff';
                   }}
                   onBlur={(e) => {
-                    e.target.style.borderColor = '#e2e8f0';
-                    e.target.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.06)';
+                    e.target.style.borderColor = '#d0d0d0';
+                    e.target.style.backgroundColor = '#fafafa';
                   }}
                 />
-                <svg
-                  style={{
-                    position: 'absolute',
-                    left: '20px',
-                    top: '50%',
-                    transform: 'translateY(-50%)',
-                    width: '20px',
-                    height: '20px',
-                    color: '#94a3b8'
-                  }}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
               </div>
 
               <div style={{
                 display: 'flex',
                 justifyContent: 'center',
-                gap: '24px',
+                gap: '32px',
                 flexWrap: 'wrap',
-                fontSize: '14px',
-                color: '#64748b'
+                fontSize: '13px',
+                color: '#6e6e6e'
               }}>
-                <span>✓ 100% Free</span>
-                <span>✓ No Sign-up</span>
-                <span>✓ No Watermarks</span>
-                <span>✓ Unlimited Use</span>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span style={{ color: '#2d9d4f', fontWeight: '600' }}>✓</span> 100% Free
+                </span>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span style={{ color: '#2d9d4f', fontWeight: '600' }}>✓</span> No Sign-up
+                </span>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span style={{ color: '#2d9d4f', fontWeight: '600' }}>✓</span> No Watermarks
+                </span>
+                <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span style={{ color: '#2d9d4f', fontWeight: '600' }}>✓</span> Secure
+                </span>
               </div>
             </div>
           </div>
         </section>
 
         {/* Tools Grid */}
-        <section style={{ padding: '20px 0 60px 0', background: 'white' }}>
+        <section style={{ padding: '40px 0 60px 0', background: '#f4f4f4' }}>
           <div className="container">
             <div style={{ textAlign: 'center', marginBottom: '32px' }}>
               <h2 style={{
-                fontSize: '28px',
+                fontSize: '24px',
                 fontWeight: '700',
-                color: '#1a202c',
-                marginBottom: '8px',
-                letterSpacing: '-0.3px'
+                color: '#323232',
+                marginBottom: '8px'
               }}>
-                All Tools
+                Document Tools
               </h2>
-              <p style={{ fontSize: '16px', color: '#64748b', fontWeight: '400' }}>
-                Click any tool to get started
+              <p style={{ fontSize: '14px', color: '#6e6e6e', fontWeight: '400' }}>
+                Select a tool to get started
               </p>
             </div>
 
@@ -743,27 +680,27 @@ export default function Home() {
               {/* PDF to Word */}
               <a href="/pdf-to-word" className="tool-card">
                 <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                  borderRadius: '16px',
+                  width: '48px',
+                  height: '48px',
+                  background: '#fa0f00',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '28px'
+                  margin: '0 auto 16px',
+                  fontSize: '22px'
                 }}>
                   📄
                 </div>
                 <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px'
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  color: '#323232',
+                  marginBottom: '6px'
                 }}>
                   PDF to Word
                 </h3>
-                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                   Convert PDF to editable DOCX
                 </p>
               </a>
@@ -771,27 +708,27 @@ export default function Home() {
               {/* Word to PDF */}
               <a href="/word-to-pdf" className="tool-card">
                 <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #48bb78 0%, #38a169 100%)',
-                  borderRadius: '16px',
+                  width: '48px',
+                  height: '48px',
+                  background: '#2d9d4f',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '28px'
+                  margin: '0 auto 16px',
+                  fontSize: '22px'
                 }}>
                   📝
                 </div>
                 <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px'
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  color: '#323232',
+                  marginBottom: '6px'
                 }}>
                   Word to PDF
                 </h3>
-                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                   Create professional PDFs
                 </p>
               </a>
@@ -799,27 +736,27 @@ export default function Home() {
               {/* Compress PDF */}
               <a href="/compress-pdf" className="tool-card">
                 <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #ed8936 0%, #dd6b20 100%)',
-                  borderRadius: '16px',
+                  width: '48px',
+                  height: '48px',
+                  background: '#e68619',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '28px'
+                  margin: '0 auto 16px',
+                  fontSize: '22px'
                 }}>
                   🗜️
                 </div>
                 <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px'
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  color: '#323232',
+                  marginBottom: '6px'
                 }}>
                   Compress PDF
                 </h3>
-                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                   Reduce PDF file size
                 </p>
               </a>
@@ -827,27 +764,27 @@ export default function Home() {
               {/* JPG to PDF */}
               <a href="/jpg-to-pdf" className="tool-card">
                 <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #48bb78 0%, #38a169 100%)',
-                  borderRadius: '16px',
+                  width: '48px',
+                  height: '48px',
+                  background: '#0d66d0',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '28px'
+                  margin: '0 auto 16px',
+                  fontSize: '22px'
                 }}>
                   🖼️
                 </div>
                 <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px'
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  color: '#323232',
+                  marginBottom: '6px'
                 }}>
                   JPG to PDF
                 </h3>
-                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                   Convert images to PDF
                 </p>
               </a>
@@ -855,27 +792,27 @@ export default function Home() {
               {/* Merge PDF */}
               <a href="/merge-pdf" className="tool-card">
                 <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                  borderRadius: '16px',
+                  width: '48px',
+                  height: '48px',
+                  background: '#7b2cbf',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '28px'
+                  margin: '0 auto 16px',
+                  fontSize: '22px'
                 }}>
                   📑
                 </div>
                 <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px'
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  color: '#323232',
+                  marginBottom: '6px'
                 }}>
                   Merge PDF
                 </h3>
-                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                   Combine multiple PDFs
                 </p>
               </a>
@@ -883,27 +820,27 @@ export default function Home() {
               {/* Split PDF */}
               <a href="/split-pdf" className="tool-card">
                 <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)',
-                  borderRadius: '16px',
+                  width: '48px',
+                  height: '48px',
+                  background: '#0891b2',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '28px'
+                  margin: '0 auto 16px',
+                  fontSize: '22px'
                 }}>
                   ✂️
                 </div>
                 <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px'
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  color: '#323232',
+                  marginBottom: '6px'
                 }}>
                   Split PDF
                 </h3>
-                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                   Extract specific pages
                 </p>
               </a>
@@ -911,27 +848,27 @@ export default function Home() {
               {/* Excel to PDF */}
               <a href="/excel-to-pdf" className="tool-card">
                 <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-                  borderRadius: '16px',
+                  width: '48px',
+                  height: '48px',
+                  background: '#2d9d4f',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '28px'
+                  margin: '0 auto 16px',
+                  fontSize: '22px'
                 }}>
                   📊
                 </div>
                 <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px'
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  color: '#323232',
+                  marginBottom: '6px'
                 }}>
                   Excel to PDF
                 </h3>
-                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                   Convert spreadsheets to PDF
                 </p>
               </a>
@@ -939,27 +876,27 @@ export default function Home() {
               {/* Rotate PDF */}
               <a href="/rotate-pdf" className="tool-card">
                 <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
-                  borderRadius: '16px',
+                  width: '48px',
+                  height: '48px',
+                  background: '#7b2cbf',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '28px'
+                  margin: '0 auto 16px',
+                  fontSize: '22px'
                 }}>
                   🔄
                 </div>
                 <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px'
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  color: '#323232',
+                  marginBottom: '6px'
                 }}>
                   Rotate PDF
                 </h3>
-                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                   Fix page orientation
                 </p>
               </a>
@@ -967,27 +904,27 @@ export default function Home() {
               {/* PDF to Excel */}
               <a href="/pdf-to-excel" className="tool-card">
                 <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)',
-                  borderRadius: '16px',
+                  width: '48px',
+                  height: '48px',
+                  background: '#0d66d0',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '28px'
+                  margin: '0 auto 16px',
+                  fontSize: '22px'
                 }}>
                   📑
                 </div>
                 <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px'
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  color: '#323232',
+                  marginBottom: '6px'
                 }}>
                   PDF to Excel
                 </h3>
-                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                   Extract tables from PDFs
                 </p>
               </a>
@@ -995,27 +932,27 @@ export default function Home() {
               {/* OCR */}
               <a href="/ocr" className="tool-card">
                 <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #ec4899 0%, #db2777 100%)',
-                  borderRadius: '16px',
+                  width: '48px',
+                  height: '48px',
+                  background: '#c2185b',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '28px'
+                  margin: '0 auto 16px',
+                  fontSize: '22px'
                 }}>
                   👁️
                 </div>
                 <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px'
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  color: '#323232',
+                  marginBottom: '6px'
                 }}>
                   OCR Scanner
                 </h3>
-                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                   Extract text from images
                 </p>
               </a>
@@ -1023,27 +960,27 @@ export default function Home() {
               {/* QR Code Generator */}
               <a href="/qr-code-generator" className="tool-card">
                 <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #ec4899 0%, #db2777 100%)',
-                  borderRadius: '16px',
+                  width: '48px',
+                  height: '48px',
+                  background: '#323232',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '28px'
+                  margin: '0 auto 16px',
+                  fontSize: '22px'
                 }}>
                   📲
                 </div>
                 <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px'
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  color: '#323232',
+                  marginBottom: '6px'
                 }}>
                   QR Code Generator
                 </h3>
-                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                   Create custom QR codes
                 </p>
               </a>
@@ -1051,27 +988,27 @@ export default function Home() {
               {/* Resume Builder */}
               <a href="/resume-builder" className="tool-card">
                 <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)',
-                  borderRadius: '16px',
+                  width: '48px',
+                  height: '48px',
+                  background: '#0d66d0',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '28px'
+                  margin: '0 auto 16px',
+                  fontSize: '22px'
                 }}>
                   📄
                 </div>
                 <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px'
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  color: '#323232',
+                  marginBottom: '6px'
                 }}>
                   Resume Builder
                 </h3>
-                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                   Create professional CVs
                 </p>
               </a>
@@ -1079,27 +1016,27 @@ export default function Home() {
               {/* Invoice Generator */}
               <a href="/invoice-generator" className="tool-card">
                 <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
-                  borderRadius: '16px',
+                  width: '48px',
+                  height: '48px',
+                  background: '#e68619',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '28px'
+                  margin: '0 auto 16px',
+                  fontSize: '22px'
                 }}>
                   🧾
                 </div>
                 <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px'
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  color: '#323232',
+                  marginBottom: '6px'
                 }}>
                   Invoice Generator
                 </h3>
-                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                   Create professional invoices
                 </p>
               </a>
@@ -1107,27 +1044,27 @@ export default function Home() {
               {/* Background Remover */}
               <a href="/background-remover" className="tool-card">
                 <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-                  borderRadius: '16px',
+                  width: '48px',
+                  height: '48px',
+                  background: '#2d9d4f',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '28px'
+                  margin: '0 auto 16px',
+                  fontSize: '22px'
                 }}>
                   🖼️
                 </div>
                 <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px'
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  color: '#323232',
+                  marginBottom: '6px'
                 }}>
                   Background Remover
                 </h3>
-                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                   Remove image backgrounds
                 </p>
               </a>
@@ -1135,27 +1072,27 @@ export default function Home() {
               {/* Paraphrase Tool */}
               <a href="/paraphrase-tool" className="tool-card">
                 <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
-                  borderRadius: '16px',
+                  width: '48px',
+                  height: '48px',
+                  background: '#e68619',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '28px'
+                  margin: '0 auto 16px',
+                  fontSize: '22px'
                 }}>
                   ✍️
                 </div>
                 <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px'
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  color: '#323232',
+                  marginBottom: '6px'
                 }}>
                   Paraphrase Tool
                 </h3>
-                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                   Rephrase text instantly
                 </p>
               </a>
@@ -1163,27 +1100,27 @@ export default function Home() {
               {/* Image Resizer */}
               <a href="/image-resizer" className="tool-card">
                 <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #06b6d4 0%, #0891b2 100%)',
-                  borderRadius: '16px',
+                  width: '48px',
+                  height: '48px',
+                  background: '#0891b2',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '28px'
+                  margin: '0 auto 16px',
+                  fontSize: '22px'
                 }}>
                   📐
                 </div>
                 <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px'
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  color: '#323232',
+                  marginBottom: '6px'
                 }}>
                   Image Resizer
                 </h3>
-                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                   Resize for social media
                 </p>
               </a>
@@ -1191,27 +1128,27 @@ export default function Home() {
               {/* Password Generator */}
               <a href="/password-generator" className="tool-card">
                 <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
-                  borderRadius: '16px',
+                  width: '48px',
+                  height: '48px',
+                  background: '#d32f2f',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '28px'
+                  margin: '0 auto 16px',
+                  fontSize: '22px'
                 }}>
                   🔐
                 </div>
                 <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px'
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  color: '#323232',
+                  marginBottom: '6px'
                 }}>
                   Password Generator
                 </h3>
-                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                   Create secure passwords
                 </p>
               </a>
@@ -1219,27 +1156,27 @@ export default function Home() {
               {/* Word Counter */}
               <a href="/word-counter" className="tool-card">
                 <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)',
-                  borderRadius: '16px',
+                  width: '48px',
+                  height: '48px',
+                  background: '#5c6bc0',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '28px'
+                  margin: '0 auto 16px',
+                  fontSize: '22px'
                 }}>
                   📊
                 </div>
                 <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px'
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  color: '#323232',
+                  marginBottom: '6px'
                 }}>
                   Word Counter
                 </h3>
-                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                   Count words & characters
                 </p>
               </a>
@@ -1247,27 +1184,27 @@ export default function Home() {
               {/* Barcode Generator */}
               <a href="/barcode-generator" className="tool-card">
                 <div style={{
-                  width: '64px',
-                  height: '64px',
-                  background: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
-                  borderRadius: '16px',
+                  width: '48px',
+                  height: '48px',
+                  background: '#323232',
+                  borderRadius: '8px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  margin: '0 auto 20px',
-                  fontSize: '28px'
+                  margin: '0 auto 16px',
+                  fontSize: '22px'
                 }}>
                   📊
                 </div>
                 <h3 style={{
-                  fontSize: '18px',
-                  fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px'
+                  fontSize: '15px',
+                  fontWeight: '600',
+                  color: '#323232',
+                  marginBottom: '6px'
                 }}>
                   Barcode Generator
                 </h3>
-                <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                   Create EAN, UPC barcodes
                 </p>
               </a>
@@ -1277,15 +1214,14 @@ export default function Home() {
             <div style={{ marginTop: '48px' }}>
               <div style={{ textAlign: 'center', marginBottom: '32px' }}>
                 <h2 style={{
-                  fontSize: '28px',
+                  fontSize: '24px',
                   fontWeight: '700',
-                  color: '#1a202c',
-                  marginBottom: '8px',
-                  letterSpacing: '-0.3px'
+                  color: '#323232',
+                  marginBottom: '8px'
                 }}>
-                  🤖 AI-Powered Tools
+                  AI-Powered Tools
                 </h2>
-                <p style={{ fontSize: '16px', color: '#64748b', fontWeight: '400' }}>
+                <p style={{ fontSize: '14px', color: '#6e6e6e', fontWeight: '400' }}>
                   Advanced content creation with AI
                 </p>
               </div>
@@ -1298,27 +1234,27 @@ export default function Home() {
                 {/* AI Summarizer */}
                 <a href="/ai-summarizer" className="tool-card">
                   <div style={{
-                    width: '64px',
-                    height: '64px',
-                    background: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)',
-                    borderRadius: '16px',
+                    width: '48px',
+                    height: '48px',
+                    background: '#0d66d0',
+                    borderRadius: '8px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    margin: '0 auto 20px',
-                    fontSize: '28px'
+                    margin: '0 auto 16px',
+                    fontSize: '22px'
                   }}>
                     📝
                   </div>
                   <h3 style={{
-                    fontSize: '18px',
-                    fontWeight: '700',
-                    color: '#1a202c',
-                    marginBottom: '8px'
+                    fontSize: '15px',
+                    fontWeight: '600',
+                    color: '#323232',
+                    marginBottom: '6px'
                   }}>
                     AI Summarizer
                   </h3>
-                  <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                     Extract key points instantly
                   </p>
                 </a>
@@ -1326,27 +1262,27 @@ export default function Home() {
                 {/* AI Content Writer */}
                 <a href="/ai-content-writer" className="tool-card">
                   <div style={{
-                    width: '64px',
-                    height: '64px',
-                    background: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)',
-                    borderRadius: '16px',
+                    width: '48px',
+                    height: '48px',
+                    background: '#7b2cbf',
+                    borderRadius: '8px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    margin: '0 auto 20px',
-                    fontSize: '28px'
+                    margin: '0 auto 16px',
+                    fontSize: '22px'
                   }}>
                     ✍️
                   </div>
                   <h3 style={{
-                    fontSize: '18px',
-                    fontWeight: '700',
-                    color: '#1a202c',
-                    marginBottom: '8px'
+                    fontSize: '15px',
+                    fontWeight: '600',
+                    color: '#323232',
+                    marginBottom: '6px'
                   }}>
                     AI Content Writer
                   </h3>
-                  <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                     Generate blogs, essays & articles
                   </p>
                 </a>
@@ -1354,27 +1290,27 @@ export default function Home() {
                 {/* AI Email Writer */}
                 <a href="/ai-email-writer" className="tool-card">
                   <div style={{
-                    width: '64px',
-                    height: '64px',
-                    background: 'linear-gradient(135deg, #6366f1 0%, #4f46e5 100%)',
-                    borderRadius: '16px',
+                    width: '48px',
+                    height: '48px',
+                    background: '#5c6bc0',
+                    borderRadius: '8px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    margin: '0 auto 20px',
-                    fontSize: '28px'
+                    margin: '0 auto 16px',
+                    fontSize: '22px'
                   }}>
                     ✉️
                   </div>
                   <h3 style={{
-                    fontSize: '18px',
-                    fontWeight: '700',
-                    color: '#1a202c',
-                    marginBottom: '8px'
+                    fontSize: '15px',
+                    fontWeight: '600',
+                    color: '#323232',
+                    marginBottom: '6px'
                   }}>
                     AI Email Writer
                   </h3>
-                  <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                     Professional emails & outreach
                   </p>
                 </a>
@@ -1382,27 +1318,27 @@ export default function Home() {
                 {/* AI Social Media Generator */}
                 <a href="/ai-social-media" className="tool-card">
                   <div style={{
-                    width: '64px',
-                    height: '64px',
-                    background: 'linear-gradient(135deg, #ec4899 0%, #db2777 100%)',
-                    borderRadius: '16px',
+                    width: '48px',
+                    height: '48px',
+                    background: '#c2185b',
+                    borderRadius: '8px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    margin: '0 auto 20px',
-                    fontSize: '28px'
+                    margin: '0 auto 16px',
+                    fontSize: '22px'
                   }}>
                     📱
                   </div>
                   <h3 style={{
-                    fontSize: '18px',
-                    fontWeight: '700',
-                    color: '#1a202c',
-                    marginBottom: '8px'
+                    fontSize: '15px',
+                    fontWeight: '600',
+                    color: '#323232',
+                    marginBottom: '6px'
                   }}>
                     AI Social Media
                   </h3>
-                  <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                     Posts for all platforms
                   </p>
                 </a>
@@ -1410,27 +1346,27 @@ export default function Home() {
                 {/* AI Grammar Checker */}
                 <a href="/ai-grammar-checker" className="tool-card">
                   <div style={{
-                    width: '64px',
-                    height: '64px',
-                    background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
-                    borderRadius: '16px',
+                    width: '48px',
+                    height: '48px',
+                    background: '#2d9d4f',
+                    borderRadius: '8px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    margin: '0 auto 20px',
-                    fontSize: '28px'
+                    margin: '0 auto 16px',
+                    fontSize: '22px'
                   }}>
                     ✓
                   </div>
                   <h3 style={{
-                    fontSize: '18px',
-                    fontWeight: '700',
-                    color: '#1a202c',
-                    marginBottom: '8px'
+                    fontSize: '15px',
+                    fontWeight: '600',
+                    color: '#323232',
+                    marginBottom: '6px'
                   }}>
                     AI Grammar Checker
                   </h3>
-                  <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                     Fix grammar & style errors
                   </p>
                 </a>
@@ -1438,27 +1374,27 @@ export default function Home() {
                 {/* AI Product Description */}
                 <a href="/ai-product-description" className="tool-card">
                   <div style={{
-                    width: '64px',
-                    height: '64px',
-                    background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)',
-                    borderRadius: '16px',
+                    width: '48px',
+                    height: '48px',
+                    background: '#e68619',
+                    borderRadius: '8px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    margin: '0 auto 20px',
-                    fontSize: '28px'
+                    margin: '0 auto 16px',
+                    fontSize: '22px'
                   }}>
                     🛍️
                   </div>
                   <h3 style={{
-                    fontSize: '18px',
-                    fontWeight: '700',
-                    color: '#1a202c',
-                    marginBottom: '8px'
+                    fontSize: '15px',
+                    fontWeight: '600',
+                    color: '#323232',
+                    marginBottom: '6px'
                   }}>
                     AI Product Description
                   </h3>
-                  <p style={{ fontSize: '14px', color: '#718096', lineHeight: '1.5' }}>
+                  <p style={{ fontSize: '13px', color: '#6e6e6e', lineHeight: '1.4' }}>
                     E-commerce copywriting
                   </p>
                 </a>
@@ -1468,183 +1404,144 @@ export default function Home() {
         </section>
 
         {/* Latest Blog Articles Section */}
-        <section style={{ padding: '60px 0', background: 'linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%)' }}>
+        <section style={{ padding: '60px 0', background: '#ffffff' }}>
           <div className="container">
-            <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+            <div style={{ textAlign: 'center', marginBottom: '40px' }}>
               <h2 style={{
-                fontSize: '32px',
+                fontSize: '24px',
                 fontWeight: '700',
-                color: '#1a202c',
-                marginBottom: '12px',
-                letterSpacing: '-0.5px'
+                color: '#323232',
+                marginBottom: '12px'
               }}>
-                📚 Expert Guides & Tutorials
+                Expert Guides & Tutorials
               </h2>
-              <p style={{ fontSize: '18px', color: '#64748b', fontWeight: '400', maxWidth: '700px', margin: '0 auto 32px' }}>
-                Learn from comprehensive guides covering document management, productivity tips, and professional workflows
+              <p style={{ fontSize: '14px', color: '#6e6e6e', fontWeight: '400', maxWidth: '600px', margin: '0 auto 24px' }}>
+                Comprehensive guides covering document management and productivity
               </p>
 
               {/* Quick Category Navigation */}
               <div style={{
                 display: 'flex',
-                gap: '12px',
+                gap: '8px',
                 flexWrap: 'wrap',
-                justifyContent: 'center',
-                marginTop: '24px'
+                justifyContent: 'center'
               }}>
                 <a
                   href="/blog"
                   style={{
-                    padding: '10px 20px',
-                    borderRadius: '24px',
-                    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    background: '#fa0f00',
                     color: 'white',
                     fontWeight: '600',
-                    fontSize: '14px',
+                    fontSize: '13px',
                     textDecoration: 'none',
-                    transition: 'all 0.2s',
-                    boxShadow: '0 2px 8px rgba(102, 126, 234, 0.3)'
+                    transition: 'all 0.2s'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-2px)';
-                    e.currentTarget.style.boxShadow = '0 4px 12px rgba(102, 126, 234, 0.4)';
+                    e.currentTarget.style.background = '#d10d00';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = '0 2px 8px rgba(102, 126, 234, 0.3)';
+                    e.currentTarget.style.background = '#fa0f00';
                   }}
                 >
-                  📖 All Articles
+                  All Articles
                 </a>
                 <a
                   href="/blog?category=pdf-guides"
                   style={{
-                    padding: '10px 20px',
-                    borderRadius: '24px',
-                    border: '2px solid #e2e8f0',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    border: '1px solid #d0d0d0',
                     background: 'white',
-                    color: '#4a5568',
-                    fontWeight: '600',
-                    fontSize: '14px',
+                    color: '#6e6e6e',
+                    fontWeight: '500',
+                    fontSize: '13px',
                     textDecoration: 'none',
                     transition: 'all 0.2s'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = '#667eea';
-                    e.currentTarget.style.color = '#667eea';
-                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.borderColor = '#323232';
+                    e.currentTarget.style.color = '#323232';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = '#e2e8f0';
-                    e.currentTarget.style.color = '#4a5568';
-                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.borderColor = '#d0d0d0';
+                    e.currentTarget.style.color = '#6e6e6e';
                   }}
                 >
-                  📄 PDF Guides
+                  PDF Guides
                 </a>
                 <a
                   href="/blog?category=productivity"
                   style={{
-                    padding: '10px 20px',
-                    borderRadius: '24px',
-                    border: '2px solid #e2e8f0',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    border: '1px solid #d0d0d0',
                     background: 'white',
-                    color: '#4a5568',
-                    fontWeight: '600',
-                    fontSize: '14px',
+                    color: '#6e6e6e',
+                    fontWeight: '500',
+                    fontSize: '13px',
                     textDecoration: 'none',
                     transition: 'all 0.2s'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = '#667eea';
-                    e.currentTarget.style.color = '#667eea';
-                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.borderColor = '#323232';
+                    e.currentTarget.style.color = '#323232';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = '#e2e8f0';
-                    e.currentTarget.style.color = '#4a5568';
-                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.borderColor = '#d0d0d0';
+                    e.currentTarget.style.color = '#6e6e6e';
                   }}
                 >
-                  ⚡ Productivity Tips
+                  Productivity
                 </a>
                 <a
                   href="/blog?category=document-management"
                   style={{
-                    padding: '10px 20px',
-                    borderRadius: '24px',
-                    border: '2px solid #e2e8f0',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    border: '1px solid #d0d0d0',
                     background: 'white',
-                    color: '#4a5568',
-                    fontWeight: '600',
-                    fontSize: '14px',
+                    color: '#6e6e6e',
+                    fontWeight: '500',
+                    fontSize: '13px',
                     textDecoration: 'none',
                     transition: 'all 0.2s'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = '#667eea';
-                    e.currentTarget.style.color = '#667eea';
-                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.borderColor = '#323232';
+                    e.currentTarget.style.color = '#323232';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = '#e2e8f0';
-                    e.currentTarget.style.color = '#4a5568';
-                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.borderColor = '#d0d0d0';
+                    e.currentTarget.style.color = '#6e6e6e';
                   }}
                 >
-                  📁 Document Management
-                </a>
-                <a
-                  href="/blog?category=business-tools"
-                  style={{
-                    padding: '10px 20px',
-                    borderRadius: '24px',
-                    border: '2px solid #e2e8f0',
-                    background: 'white',
-                    color: '#4a5568',
-                    fontWeight: '600',
-                    fontSize: '14px',
-                    textDecoration: 'none',
-                    transition: 'all 0.2s'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = '#667eea';
-                    e.currentTarget.style.color = '#667eea';
-                    e.currentTarget.style.transform = 'translateY(-2px)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = '#e2e8f0';
-                    e.currentTarget.style.color = '#4a5568';
-                    e.currentTarget.style.transform = 'translateY(0)';
-                  }}
-                >
-                  💼 Business Tools
+                  Document Management
                 </a>
                 <a
                   href="/blog?category=tutorials"
                   style={{
-                    padding: '10px 20px',
-                    borderRadius: '24px',
-                    border: '2px solid #e2e8f0',
+                    padding: '8px 16px',
+                    borderRadius: '4px',
+                    border: '1px solid #d0d0d0',
                     background: 'white',
-                    color: '#4a5568',
-                    fontWeight: '600',
-                    fontSize: '14px',
+                    color: '#6e6e6e',
+                    fontWeight: '500',
+                    fontSize: '13px',
                     textDecoration: 'none',
                     transition: 'all 0.2s'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.borderColor = '#667eea';
-                    e.currentTarget.style.color = '#667eea';
-                    e.currentTarget.style.transform = 'translateY(-2px)';
+                    e.currentTarget.style.borderColor = '#323232';
+                    e.currentTarget.style.color = '#323232';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.borderColor = '#e2e8f0';
-                    e.currentTarget.style.color = '#4a5568';
-                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.borderColor = '#d0d0d0';
+                    e.currentTarget.style.color = '#6e6e6e';
                   }}
                 >
-                  🎓 How-To Tutorials
+                  Tutorials
                 </a>
               </div>
             </div>
@@ -2691,69 +2588,100 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Footer */}
+        {/* Footer - Adobe Dark Theme */}
         <footer style={{
-          background: '#1a202c',
+          background: '#323232',
           color: 'white',
           padding: '48px 0 32px 0'
         }}>
           <div className="container">
             <div style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
               gap: '32px',
               marginBottom: '32px'
             }}>
               <div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
                   <div style={{
                     width: '32px',
                     height: '32px',
-                    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                    borderRadius: '8px',
+                    background: '#fa0f00',
+                    borderRadius: '6px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     color: 'white',
-                    fontSize: '16px',
+                    fontSize: '14px',
                     fontWeight: 'bold'
                   }}>
                     D
                   </div>
-                  <h3 style={{ fontSize: '18px', fontWeight: '600' }}>Document Converter Pro</h3>
+                  <span style={{ fontSize: '16px', fontWeight: '600' }}>Document Converter Pro</span>
                 </div>
-                <p style={{ fontSize: '14px', color: '#a0aec0', lineHeight: '1.6' }}>
-                  Free online document conversion tools for PDFs, Word documents, images, and more. No registration required.
+                <p style={{ fontSize: '13px', color: '#959595', lineHeight: '1.6' }}>
+                  Free online document conversion tools. No registration required.
                 </p>
               </div>
 
               <div>
-                <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '16px' }}>Tools</h4>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  <a href="/pdf-to-word" style={{ color: '#a0aec0', textDecoration: 'none', fontSize: '14px' }}>PDF to Word</a>
-                  <a href="/word-to-pdf" style={{ color: '#a0aec0', textDecoration: 'none', fontSize: '14px' }}>Word to PDF</a>
-                  <a href="/invoice-generator" style={{ color: '#a0aec0', textDecoration: 'none', fontSize: '14px' }}>Invoice Generator</a>
-                  <a href="/pdf-split" style={{ color: '#a0aec0', textDecoration: 'none', fontSize: '14px' }}>Split PDF</a>
+                <h4 style={{ fontSize: '13px', fontWeight: '600', marginBottom: '16px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Tools</h4>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <a href="/pdf-to-word" style={{ color: '#b3b3b3', textDecoration: 'none', fontSize: '13px', transition: 'color 0.2s' }}
+                     onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'}
+                     onMouseLeave={(e) => e.currentTarget.style.color = '#b3b3b3'}>PDF to Word</a>
+                  <a href="/word-to-pdf" style={{ color: '#b3b3b3', textDecoration: 'none', fontSize: '13px', transition: 'color 0.2s' }}
+                     onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'}
+                     onMouseLeave={(e) => e.currentTarget.style.color = '#b3b3b3'}>Word to PDF</a>
+                  <a href="/invoice-generator" style={{ color: '#b3b3b3', textDecoration: 'none', fontSize: '13px', transition: 'color 0.2s' }}
+                     onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'}
+                     onMouseLeave={(e) => e.currentTarget.style.color = '#b3b3b3'}>Invoice Generator</a>
+                  <a href="/split-pdf" style={{ color: '#b3b3b3', textDecoration: 'none', fontSize: '13px', transition: 'color 0.2s' }}
+                     onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'}
+                     onMouseLeave={(e) => e.currentTarget.style.color = '#b3b3b3'}>Split PDF</a>
                 </div>
               </div>
 
               <div>
-                <h4 style={{ fontSize: '16px', fontWeight: '600', marginBottom: '16px' }}>Resources</h4>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                  <a href="/blog" style={{ color: '#a0aec0', textDecoration: 'none', fontSize: '14px' }}>Blog</a>
-                  <a href="/faq" style={{ color: '#a0aec0', textDecoration: 'none', fontSize: '14px' }}>FAQ</a>
-                  <a href="/about" style={{ color: '#a0aec0', textDecoration: 'none', fontSize: '14px' }}>About Us</a>
-                  <a href="mailto:genius@drop-it.tech" style={{ color: '#a0aec0', textDecoration: 'none', fontSize: '14px' }}>Contact</a>
+                <h4 style={{ fontSize: '13px', fontWeight: '600', marginBottom: '16px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Resources</h4>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <a href="/blog" style={{ color: '#b3b3b3', textDecoration: 'none', fontSize: '13px', transition: 'color 0.2s' }}
+                     onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'}
+                     onMouseLeave={(e) => e.currentTarget.style.color = '#b3b3b3'}>Blog</a>
+                  <a href="/faq" style={{ color: '#b3b3b3', textDecoration: 'none', fontSize: '13px', transition: 'color 0.2s' }}
+                     onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'}
+                     onMouseLeave={(e) => e.currentTarget.style.color = '#b3b3b3'}>FAQ</a>
+                  <a href="/about" style={{ color: '#b3b3b3', textDecoration: 'none', fontSize: '13px', transition: 'color 0.2s' }}
+                     onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'}
+                     onMouseLeave={(e) => e.currentTarget.style.color = '#b3b3b3'}>About Us</a>
+                  <a href="mailto:accounts@drop-it.tech" style={{ color: '#b3b3b3', textDecoration: 'none', fontSize: '13px', transition: 'color 0.2s' }}
+                     onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'}
+                     onMouseLeave={(e) => e.currentTarget.style.color = '#b3b3b3'}>Contact</a>
+                </div>
+              </div>
+
+              <div>
+                <h4 style={{ fontSize: '13px', fontWeight: '600', marginBottom: '16px', color: '#ffffff', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Account</h4>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <a href="/billing/login" style={{ color: '#b3b3b3', textDecoration: 'none', fontSize: '13px', transition: 'color 0.2s' }}
+                     onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'}
+                     onMouseLeave={(e) => e.currentTarget.style.color = '#b3b3b3'}>Client Portal</a>
+                  <a href="/admin/login" style={{ color: '#b3b3b3', textDecoration: 'none', fontSize: '13px', transition: 'color 0.2s' }}
+                     onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'}
+                     onMouseLeave={(e) => e.currentTarget.style.color = '#b3b3b3'}>Admin Login</a>
+                  <a href="mailto:accounts@drop-it.tech" style={{ color: '#b3b3b3', textDecoration: 'none', fontSize: '13px', transition: 'color 0.2s' }}
+                     onMouseEnter={(e) => e.currentTarget.style.color = '#ffffff'}
+                     onMouseLeave={(e) => e.currentTarget.style.color = '#b3b3b3'}>New Subscription</a>
                 </div>
               </div>
             </div>
 
             <div style={{
-              borderTop: '1px solid #2d3748',
+              borderTop: '1px solid #4a4a4a',
               paddingTop: '24px',
               textAlign: 'center'
             }}>
-              <p style={{ fontSize: '14px', color: '#a0aec0' }}>
+              <p style={{ fontSize: '12px', color: '#959595' }}>
                 © 2025 Document Converter Pro. All rights reserved.
               </p>
             </div>
