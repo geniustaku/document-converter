@@ -36,6 +36,7 @@ export default function AdminInvoiceDetail() {
   const [isEditing, setIsEditing] = useState(false);
   const [editItems, setEditItems] = useState<EditableItem[]>([]);
   const [editVatRate, setEditVatRate] = useState(15);
+  const [editIssueDate, setEditIssueDate] = useState('');
   const [editDueDate, setEditDueDate] = useState('');
   const [editNotes, setEditNotes] = useState('');
   const [saveError, setSaveError] = useState('');
@@ -111,6 +112,7 @@ export default function AdminInvoiceDetail() {
       unit_price: item.unit_price,
     })) || []);
     setEditVatRate(invoice.vat_rate);
+    setEditIssueDate(formatDateForInput(invoice.issue_date));
     setEditDueDate(formatDateForInput(invoice.due_date));
     setEditNotes(invoice.notes || '');
     setSaveError('');
@@ -190,6 +192,7 @@ export default function AdminInvoiceDetail() {
         body: JSON.stringify({
           items: editItems,
           vat_rate: editVatRate,
+          issue_date: editIssueDate,
           due_date: editDueDate,
           notes: editNotes,
         }),
@@ -413,21 +416,34 @@ export default function AdminInvoiceDetail() {
                   </div>
                   <div className="text-right">
                     <h3 className="text-sm font-medium text-gray-500 mb-2">Invoice Details</h3>
-                    <p className="text-gray-600">Issue Date: <span className="font-medium text-gray-900">{formatDate(invoice.issue_date)}</span></p>
                     {isEditing ? (
-                      <div className="mt-2">
-                        <label className="text-gray-600">Due Date:</label>
-                        <input
-                          type="date"
-                          value={editDueDate}
-                          onChange={(e) => setEditDueDate(e.target.value)}
-                          className="ml-2 px-2 py-1 border border-gray-300 rounded text-gray-900"
-                        />
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-end">
+                          <label className="text-gray-600 mr-2">Issue Date:</label>
+                          <input
+                            type="date"
+                            value={editIssueDate}
+                            onChange={(e) => setEditIssueDate(e.target.value)}
+                            className="px-2 py-1 border border-gray-300 rounded text-gray-900"
+                          />
+                        </div>
+                        <div className="flex items-center justify-end">
+                          <label className="text-gray-600 mr-2">Due Date:</label>
+                          <input
+                            type="date"
+                            value={editDueDate}
+                            onChange={(e) => setEditDueDate(e.target.value)}
+                            className="px-2 py-1 border border-gray-300 rounded text-gray-900"
+                          />
+                        </div>
                       </div>
                     ) : (
-                      <p className="text-gray-600">Due Date: <span className="font-medium text-gray-900">{formatDate(invoice.due_date)}</span></p>
+                      <>
+                        <p className="text-gray-600">Issue Date: <span className="font-medium text-gray-900">{formatDate(invoice.issue_date)}</span></p>
+                        <p className="text-gray-600">Due Date: <span className="font-medium text-gray-900">{formatDate(invoice.due_date)}</span></p>
+                      </>
                     )}
-                    <p className="text-gray-600">Period: <span className="font-medium text-gray-900">{formatDate(invoice.billing_period_start)} - {formatDate(invoice.billing_period_end)}</span></p>
+                    <p className="text-gray-600 mt-2">Period: <span className="font-medium text-gray-900">{formatDate(invoice.billing_period_start)} - {formatDate(invoice.billing_period_end)}</span></p>
                   </div>
                 </div>
               </div>

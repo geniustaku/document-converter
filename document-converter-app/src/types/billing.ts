@@ -220,6 +220,7 @@ export interface CreateInvoiceInput {
 
 export interface UpdateInvoiceInput {
   status?: InvoiceStatus;
+  issue_date?: Date;
   due_date?: Date;
   notes?: string;
   terms?: string;

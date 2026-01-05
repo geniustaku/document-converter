@@ -119,6 +119,11 @@ async function updateInvoice(
       }
     }
 
+    if (input.issue_date !== undefined) {
+      updates.push('issue_date = @issue_date');
+      params.push({ name: 'issue_date', type: sql.Date, value: new Date(input.issue_date) });
+    }
+
     if (input.due_date !== undefined) {
       updates.push('due_date = @due_date');
       params.push({ name: 'due_date', type: sql.Date, value: new Date(input.due_date) });
