@@ -98,6 +98,7 @@ async function handler(
 
       // Update invoice
       const amountPaid = transactionData.amount / 100; // Convert from cents
+      const invoiceId = parseInt(payment.invoice_id, 10); // Ensure it's a number
       await query(
         `UPDATE invoices SET
           amount_paid = amount_paid + @amount_paid,
@@ -112,7 +113,7 @@ async function handler(
         [
           { name: 'amount_paid', type: sql.Decimal, value: amountPaid },
           { name: 'reference', type: sql.NVarChar, value: reference },
-          { name: 'invoice_id', type: sql.Int, value: payment.invoice_id },
+          { name: 'invoice_id', type: sql.Int, value: invoiceId },
         ]
       );
 
@@ -131,7 +132,7 @@ async function handler(
       // Get updated invoice status
       const invoiceResult = await query<{ status: string }>(
         `SELECT status FROM invoices WHERE id = @invoice_id`,
-        [{ name: 'invoice_id', type: sql.Int, value: payment.invoice_id }]
+        [{ name: 'invoice_id', type: sql.Int, value: invoiceId }]
       );
 
       return res.status(200).json({

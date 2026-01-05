@@ -292,12 +292,32 @@ export function generatePaymentId(): string {
 
 export async function generateInvoiceNumber(): Promise<string> {
   const year = new Date().getFullYear();
-  const result = await query<{ max_seq: number }>(
-    `SELECT ISNULL(MAX(CAST(RIGHT(invoice_number, 4) AS INT)), 0) + 1 as max_seq
-     FROM invoices
-     WHERE invoice_number LIKE @pattern`,
-    [{ name: 'pattern', type: sql.NVarChar, value: `INV-${year}-%` }]
-  );
-  const sequence = result.recordset[0]?.max_seq || 1;
-  return `INV-${year}-${sequence.toString().padStart(4, '0')}`;
+  let invoiceNumber: string;
+  let attempts = 0;
+  const maxAttempts = 10;
+
+  // Generate random 4-digit number and ensure uniqueness
+  do {
+    const random = Math.floor(1000 + Math.random() * 9000); // 1000-9999
+    invoiceNumber = `INV-${year}-${random}`;
+
+    // Check if this invoice number already exists
+    const existingResult = await query<{ count: number }>(
+      `SELECT COUNT(*) as count FROM invoices WHERE invoice_number = @invoice_number`,
+      [{ name: 'invoice_number', type: sql.NVarChar, value: invoiceNumber }]
+    );
+
+    if (existingResult.recordset[0]?.count === 0) {
+      break; // Unique number found
+    }
+    attempts++;
+  } while (attempts < maxAttempts);
+
+  // Fallback to timestamp-based if random collisions occur
+  if (attempts >= maxAttempts) {
+    const timestamp = Date.now().toString().slice(-4);
+    invoiceNumber = `INV-${year}-${timestamp}`;
+  }
+
+  return invoiceNumber;
 }
